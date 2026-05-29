@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEISAT - Result Portal</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/Result/result.css">
+
+
+</head>
+
+<body class="maintenance-active">
+
+    <div id="maintenance-page">
+        <div class="logo-container">
+            <img src="/Pictures/logo.png" alt="IEISAT - Institute of Education and Innovation Logo"  style="width: 100%;">
+        </div>
+        <h1>IEISAT</h1>
+        <p class="tagline">Result Portal is opening soon</p>
+
+        <div class="timer-container">
+            <div class="timer-box"><span id="days">00</span><label>Days</label></div>
+            <div class="timer-box"><span id="hours">00</span><label>Hours</label></div>
+            <div class="timer-box"><span id="minutes">00</span><label>Mins</label></div>
+            <div class="timer-box"><span id="seconds">00</span><label>Secs</label></div>
+        </div>
+
+        <div class="notice-card">
+            📢 The portal (will be opened) on February 20, 2027.
+        </div>
+    </div>
+
+    <div id="portal-page">
+        <div class="main-header">
+            <h1>Institute of Education and Innovation</h1>
+            <h2>IEISAT Result Portal</h2>
+        </div>
+
+        <div class="wrapper">
+            <div class="container">
+                <div id="formSection">
+                    <div class="panel-heading">Login Details</div>
+                    <div class="panel-body">
+
+                        <div class="form-group">
+                            <label>Roll Number <span>*</span></label>
+                            <input type="text" id="rollNo" placeholder="Enter Roll Number"
+                                oninput="clearError('rollNoError')">
+                        </div>
+                        <div id="rollNoError" class="error-msg">Please enter Roll Number.</div>
+
+                        <div class="form-group">
+                            <label>Candidate Name <span>*</span></label>
+                            <input type="text" id="name" placeholder="Enter Candidate Name"
+                                oninput="clearError('nameError')">
+                        </div>
+                        <div id="nameError" class="error-msg">Please enter Candidate Name.</div>
+
+                        <div class="form-group">
+                            <label>Date of Birth <span>*</span></label>
+                            <input type="date" id="dob" onchange="clearError('dobError')">
+                        </div>
+                        <div id="dobError" class="error-msg">Please select Date of Birth.</div>
+
+                        <div class="form-group" style="margin-bottom: 5px;">
+                            <label>Security Pin <span>*</span></label>
+                            <input type="text" id="securityPin" placeholder="Enter Security Pin (Case Sensitive)"
+                                oninput="clearError('pinError')">
+                        </div>
+                        <div id="pinError" class="error-msg">Security Pin did not match.</div>
+
+                        <div class="captcha-wrapper">
+                            <div class="captcha-box" id="captchaText">A8B2X</div>
+                            <button class="btn-captcha-refresh" onclick="generateCaptcha()"
+                                title="Generate New Pin">🗘</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn-submit" id="submitBtn" onclick="checkResult()">Submit</button>
+                            <span id="loader" class="loader">Please wait...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resultBox" class="result-section">
+                    <div class="panel-heading">
+                        <span>Candidate Score Card</span>
+                        <div class="action-btns" id="actionButtons" style="display:none;">
+                            <button class="btn-submit print-btn" onclick="window.print()">🖨️ Print</button>
+                            <button class="btn-submit download-btn" onclick="downloadResult()">📥 Download</button>
+                        </div>
+                    </div>
+
+                    <div id="scoreCardDownloadArea" class="score-card-area">
+                        <div id="resultContent"></div>
+                    </div>
+
+                    <div class="panel-body" style="padding-top: 0; border-top: 1px solid #eee; margin-top: 10px;">
+                        <button class="btn-submit" style="width: 100%; background: #6c757d; border-color: #5a6268;"
+                            onclick="goBack()">Back to Login</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            Disclaimer: The final results displayed on this portal are published for candidates’ reference. For any
+            doubts
+            or clarifications, please contact <a style="text-decoration: none; font-size: larger;"
+                href="mailto:info.ieisat@gmail.com">&nbsp; I.E.I &nbsp;</a> authority.
+        </div>
+    </div>
+
+    <script>
+        // --- 1. COUNTDOWN TIMER LOGIC ---
+        const targetDate = new Date("2027-02-20T23:59:59").getTime();
+
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minsEl = document.getElementById("minutes");
+        const secsEl = document.getElementById("seconds");
+        const maintenancePage = document.getElementById("maintenance-page");
+        const portalPage = document.getElementById("portal-page");
+
+        function formatTime(time) {
+            return time < 10 ? `0${time}` : time;
+        }
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+                daysEl.innerText = formatTime(d);
+                hoursEl.innerText = formatTime(h);
+                minsEl.innerText = formatTime(m);
+                secsEl.innerText = formatTime(s);
+            } else {
+                showPortal();
+            }
+        }
+
+        function showPortal() {
+            // সুন্দরভাবে মেইনটেন্যান্স পেজ হাইড করা
+            maintenancePage.style.opacity = "0";
+            maintenancePage.style.visibility = "hidden";
+
+            // মেইন ফর্ম এবং পেজ স্ক্রল চালু করা
+            setTimeout(() => {
+                maintenancePage.style.display = "none";
+                portalPage.style.display = "block";
+                document.body.classList.remove("maintenance-active");
+            }, 800);
+
+            if (window.timerInterval) {
+                clearInterval(window.timerInterval);
+            }
+        }
+
+        // পেজ লোড হওয়ার পর টাইমার চেক করা
+        const initialDiff = targetDate - new Date().getTime();
+        if (initialDiff > 0) {
+            updateTimer();
+            window.timerInterval = setInterval(updateTimer, 1000);
+        } else {
+            // যদি তারিখ আগে থেকেই পার হয়ে গিয়ে থাকে
+            maintenancePage.style.display = "none";
+            portalPage.style.display = "block";
+            document.body.classList.remove("maintenance-active");
+        }
+
+
+        // --- 2. EXISTING FORM & SCORE CARD LOGIC ---
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzg4U5sDAPTdBvroyHZ2C8B8sOlWBjkXRJBIl_xG2-FViF-MS-tWDRwiofIoZdvgm5POA/exec";
+        var currentCaptcha = "";
+
+        window.onload = function () {
+            generateCaptcha();
+            // Update timer call is handled above independently
+        };
+
+        function generateCaptcha() {
+            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            currentCaptcha = "";
+            for (var i = 0; i < 5; i++) {
+                currentCaptcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('captchaText').innerText = currentCaptcha;
+            document.getElementById('securityPin').value = "";
+            clearError('pinError');
+        }
+
+        function checkResult() {
+            var rollNo = document.getElementById('rollNo').value.trim();
+            var name = document.getElementById('name').value.trim();
+            var dob = document.getElementById('dob').value.trim();
+            var securityPin = document.getElementById('securityPin').value.trim();
+
+            var isValid = true;
+
+            if (rollNo === "") { document.getElementById('rollNoError').style.display = 'block'; isValid = false; }
+            if (name === "") { document.getElementById('nameError').style.display = 'block'; isValid = false; }
+            if (dob === "") { document.getElementById('dobError').style.display = 'block'; isValid = false; }
+
+            if (securityPin !== currentCaptcha) {
+                document.getElementById('pinError').style.display = 'block';
+                generateCaptcha();
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('loader').style.display = 'inline-block';
+
+            var finalUrl = SCRIPT_URL + "?rollNo=" + encodeURIComponent(rollNo) +
+                "&name=" + encodeURIComponent(name) +
+                "&dob=" + encodeURIComponent(dob);
+
+            fetch(finalUrl)
+                .then(response => response.json())
+                .then(response => {
+                    document.getElementById('submitBtn').disabled = false;
+                    document.getElementById('loader').style.display = 'none';
+
+                    document.getElementById('formSection').style.display = 'none';
+                    document.getElementById('resultBox').style.display = 'block';
+
+                    var resultContent = document.getElementById('resultContent');
+                    var actionButtons = document.getElementById('actionButtons');
+
+                    if (response.success) {
+                        actionButtons.style.display = 'flex';
+                        resultContent.innerHTML = `
+                            <div class="result-header">
+                                <h3>SCORE CARD DETAILS</h3>
+                            </div>
+                            <table class="result-table">
+                                <tr>
+                                    <th>Roll Number</th>
+                                    <td>${rollNo}</td>
+                                </tr>
+                                <tr>
+                                    <th>Candidate's Name</th>
+                                    <td>${response.studentName}</td>
+                                </tr>
+                                <tr>
+                                    <th>Date of Birth</th>
+                                    <td>${dob.split('-').reverse().join('-')}</td>
+                                </tr>
+                                <tr>
+                                    <th>Total Marks Obtained</th>
+                                    <td>${response.marks}</td>
+                                </tr>
+                                <tr>
+                                    <th>All India Rank (AIR)</th>
+                                    <td>${response.rank}</td>
+                                </tr>
+                            </table>
+                            <p style="font-size: 12px; color: red; margin-top: 15px; margin-bottom: 5px;">* Note: This is computer generated score card. No signature is required.</p>
+                            <div class="watermark">Generated securely via IEI Portal Emulator • Date: ${new Date().toLocaleDateString()}</div>
+                        `;
+                    } else {
+                        actionButtons.style.display = 'none';
+                        resultContent.innerHTML = `
+                            <div style="border: 1px solid red; padding: 20px; background: #ffe6e6; color: red; text-align: center; font-weight: bold;">
+                                ERROR: Invalid Details or Record Not Found. <br><br>
+                                Please check your Roll Number, Name and Date of Birth.
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('submitBtn').disabled = false;
+                    document.getElementById('loader').style.display = 'none';
+                    alert("Network connection error. Please try again later.");
+                });
+        }
+
+        function downloadResult() {
+            var downloadArea = document.getElementById("scoreCardDownloadArea");
+            var rollNumber = document.getElementById("rollNo").value.trim();
+
+            html2canvas(downloadArea, {
+                scale: 2,
+                backgroundColor: "#ffffff"
+            }).then(canvas => {
+                var imgData = canvas.toDataURL('image/png');
+                const { jsPDF } = window.jspdf;
+                var pdf = new jsPDF('p', 'mm', 'a4');
+                var imgWidth = 210;
+                var pageHeight = 295;
+                var imgHeight = canvas.height * imgWidth / canvas.width;
+                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+                pdf.save('IEISAT_ScoreCard_' + rollNumber + '.pdf');
+            });
+        }
+
+        function clearError(errorId) { document.getElementById(errorId).style.display = 'none'; }
+
+        function goBack() {
+            document.getElementById('resultBox').style.display = 'none';
+            document.getElementById('formSection').style.display = 'block';
+
+            document.getElementById('rollNo').value = "";
+            document.getElementById('name').value = "";
+            document.getElementById('dob').value = "";
+
+            generateCaptcha();
+
+            clearError('rollNoError'); clearError('nameError');
+            clearError('dobError'); clearError('pinError');
+        }
+    </script>
+</body>
+
+</html>

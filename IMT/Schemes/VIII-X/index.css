@@ -1,0 +1,74 @@
+.notice-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notice-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.notice-scroll::-webkit-scrollbar-thumb {
+  background: #0056b3;
+  border-radius: 4px;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+
+.space-y-4::-webkit-scrollbar {
+  width: 8px;
+}
+
+.space-y-4::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.space-y-4::-webkit-scrollbar-thumb {
+  background: #0056b3;
+  border-radius: 20px;
+}
+
+.space-y-4::-webkit-scrollbar-thumb:hover {
+  background: #003366;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent scrolling while splash screen is active */
+body.splash-active {
+  overflow: hidden;
+}
+
+/* Splash Screen Animations */
+.pulse-glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}

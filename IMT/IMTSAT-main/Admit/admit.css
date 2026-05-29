@@ -1,0 +1,152 @@
+/* --- বেসিক রিসেট ও ফন্ট --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #001a33;
+    overflow: hidden;
+}
+
+/* --- মেইনটেন্যান্স / কামিং সুন পেজ --- */
+#maintenance-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #003366 0%, #001122 100%);
+    text-align: center;
+    padding: 20px;
+    z-index: 10;
+    /* স্মুথ ফেড-আউট অ্যানিমেশন */
+    transition: opacity 0.8s ease-out, visibility 0.8s;
+}
+
+.logo-container {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(0, 150, 255, 0.4);
+    animation: float 3s ease-in-out infinite;
+    /* লোগোর ভাসমান অ্যানিমেশন */
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+p.tagline {
+    font-size: 1rem;
+    color: #93c5fd;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- টাইমার ডিজাইন --- */
+.timer-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timer-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 12px;
+    min-width: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+/* font-variant-numeric: tabular-nums; টাইমারের নাম্বারগুলোকে লাফালাফি করা থেকে বিরত রাখে */
+.timer-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #00d4ff;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-box label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #a0aec0;
+    letter-spacing: 1px;
+}
+
+.notice-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+/* --- মেইন পোর্টাল (পেছনে লোড হয়ে থাকবে) --- */
+#portal-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* মোবাইল রেসপন্সিভনেস */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .timer-box {
+        min-width: 70px;
+        padding: 10px;
+    }
+
+    .timer-box span {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,479 @@
+/* ==============================================
+           🌟 MAINTENANCE / COMING SOON PAGE CSS
+           ============================================== */
+body.maintenance-active {
+    overflow: hidden;
+    /* প্রিভেন্ট স্ক্রলিং যখন টাইমার চলবে */
+}
+
+#maintenance-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #003366 0%, #001122 100%);
+    text-align: center;
+    padding: 20px;
+    z-index: 9999;
+    transition: opacity 0.8s ease-out, visibility 0.8s;
+    box-sizing: border-box;
+}
+
+#maintenance-page .logo-container {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(0, 150, 255, 0.4);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#maintenance-page h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0 0 5px 0;
+}
+
+#maintenance-page p.tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #93c5fd;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timer-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timer-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 12px;
+    min-width: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.timer-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #00d4ff;
+    font-family: 'Montserrat', sans-serif;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-box label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #a0aec0;
+    letter-spacing: 1px;
+}
+
+.notice-card {
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+/* মেইন পোর্টাল কন্টেইনার */
+#portal-page {
+    display: none;
+    /* ডিফল্টভাবে হাইড থাকবে */
+}
+
+/* ===== NTA Style Formal CSS ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Main Agency Header */
+.main-header {
+    background: #004085;
+    padding: 15px 20px;
+    border-bottom: 3px solid #f37021;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-header h2 {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    margin: 5px 0 0 0;
+    font-size: 15px;
+}
+
+/* Main Container */
+.wrapper {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 15px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #0056b3;
+}
+
+/* Panel Header */
+.panel-heading {
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-body {
+    padding: 30px;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    width: 200px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group label span {
+    color: red;
+}
+
+.form-group input {
+    flex: 1;
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    font-size: 14px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+input:not(#securityPin),
+[type="text"] {
+    text-transform: uppercase;
+}
+
+#securityPin {
+    text-transform: none;
+}
+
+/* Captcha & Reset Button Design */
+.captcha-wrapper {
+    margin-left: 200px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.captcha-box {
+    background: #e9ecef;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #0056b3;
+    user-select: none;
+    font-style: italic;
+    text-decoration: line-through;
+    border: 1px solid #ccc;
+}
+
+.btn-captcha-refresh {
+    color: #28a745;
+    background: transparent;
+    border: 1px solid transparent;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.btn-captcha-refresh:hover {
+    transform: rotate(45deg);
+}
+
+/* Error Message */
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-left: 200px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: none;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-group {
+    margin-left: 200px;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-submit {
+    background: #28a745;
+    color: white;
+    border: 1px solid #218838;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.btn-submit:hover {
+    background: #218838;
+}
+
+.btn-submit:disabled {
+    background: #94d3a2;
+    cursor: not-allowed;
+    border-color: #94d3a2;
+}
+
+.loader {
+    display: none;
+    font-size: 14px;
+    color: #0056b3;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* ===== Marksheet Table Design ===== */
+.result-section {
+    display: none;
+}
+
+.action-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.print-btn {
+    background: #6c757d;
+    border-color: #5a6268;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.print-btn:hover {
+    background: #5a6268;
+}
+
+.download-btn {
+    background: #0056b3;
+    border-color: #004494;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.download-btn:hover {
+    background: #004494;
+}
+
+.score-card-area {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid transparent;
+    overflow-x: auto;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #333;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.result-table th {
+    background: #f0f0f0;
+    width: 40%;
+    color: #333;
+}
+
+.result-table td {
+    font-weight: bold;
+    color: #003061;
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-header h3 {
+    margin: 0;
+    color: #003061;
+    text-decoration: underline;
+}
+
+.watermark {
+    text-align: center;
+    font-size: 10px;
+    color: #999;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #666;
+    margin-top: 30px;
+}
+
+/* =========================================
+           RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+           ========================================= */
+@media screen and (max-width: 600px) {
+    .main-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .wrapper {
+        padding-top: 20px;
+    }
+
+    .panel-body {
+        padding: 20px 15px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .captcha-wrapper,
+    .error-msg,
+    .btn-group {
+        margin-left: 0;
+    }
+
+    .captcha-wrapper {
+        margin-top: 10px;
+    }
+
+    .error-msg {
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    .action-btns {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .result-table th,
+    .result-table td {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    /* Maintenance page responsive */
+    #maintenance-page h1 {
+        font-size: 1.8rem;
+    }
+
+    .timer-box {
+        min-width: 70px;
+        padding: 10px;
+    }
+
+    .timer-box span {
+        font-size: 1.8rem;
+    }
+}

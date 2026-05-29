@@ -1,0 +1,2874 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+
+<head>
+  <!-- Primary Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMTSAT | Institute of Modern Technology</title>
+
+
+  <link rel="stylesheet" href="/index.css" />
+
+  <link rel="icon" type="image/x-icon" href="/Pictures/logo.png" loading="lazy" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    /* MASTER FIX FOR HORIZONTAL OVERFLOW */
+    html,
+    body {
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      width: 100% !important;
+      position: relative;
+    }
+  </style>
+
+</head>
+
+<body
+  class="bg-gray-50 dark:bg-gray-900 font-sans text-gray-800 dark:text-gray-200 selection:bg-blue-200 flex flex-col min-h-screen transition-colors duration-300 splash-active overflow-x-hidden w-full max-w-[100vw] m-0 p-0">
+  <div id="splash-screen"
+    class="fixed inset-0 z-[9999] bg-[#002244] flex flex-col items-center justify-center transition-opacity duration-700">
+    <div>
+      <img
+        class="w-24 h-24 bg-white rounded-full flex items-center justify-center text-[#003366] font-black text-4xl mb-6 pulse-glow object-cover"
+        src="https://www.imtec.in/Pictures/logo.png" alt="Institute of Modern Technology Logo" loading="lazy" onerror="
+            this.src =
+              'data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23003366\'><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6zm4 4h-2v-2h2v2zm0-4h-2V7h2v6z\'/></svg>'
+          " />
+    </div>
+    <h1 class="text-4xl font-extrabold text-white tracking-widest mb-2">
+      IMT
+    </h1>
+    <p class="text-blue-300 text-sm font-semibold tracking-wider animate-pulse">
+      Loading Portal...
+    </p>
+  </div>
+
+  <div class="bg-[#003366] text-white text-xs py-1 px-4 md:px-10 flex justify-between items-center w-full">
+    <div class="truncate pr-2">
+      <span class="truncate">Institute of Modern Technology &nbsp;|&nbsp; IMT</span>
+    </div>
+    <div class="hidden md:block space-x-4 flex-shrink-0">
+      <span>Helpline: <a href="tel:+919002352549" class="hover:underline">+91-9002352549</a></span>
+    </div>
+  </div>
+
+  <header style="display: flex;"
+    class="bg-white dark:bg-gray-800 py-4 px-4 md:px-10 shadow-sm transition-colors duration-300 border-b dark:border-gray-700">
+    <div class="flex items-center gap-4">
+      <div>
+        <img
+          class="w-full max-w-[80px] aspect-square bg-blue-100 dark:bg-blue-900 border-2 border-blue-800 dark:border-blue-400 rounded-full shadow-inner transition-colors duration-300 object-cover"
+          src="/Pictures/logo.png" alt="IMT Logo" loading="lazy" onerror="
+              this.src =
+                'data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23003366\'><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6zm4 4h-2v-2h2v2zm0-4h-2V7h2v6z\'/></svg>'
+            " />
+      </div>
+      <div class="max-w-full">
+        <h1 class="text-[clamp(1.25rem,2.5vw,2.5rem)] font-extrabold text-[#003366] dark:text-blue-400">
+          Department of Education
+        </h1>
+
+        <p
+          class="mt-1 text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-600 dark:text-gray-400 leading-snug transition-colors">
+          Institute of Modern Technology
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div>
+        <img
+          class="w-full max-w-[80px] aspect-square bg-blue-100 dark:bg-blue-900 border-2 border-blue-800 dark:border-blue-400 rounded-full shadow-inner transition-colors duration-300 object-cover"
+          src="/Pictures/logo.png" alt="IMT Logo" loading="lazy" onerror="
+              this.src =
+                'data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23003366\'><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6zm4 4h-2v-2h2v2zm0-4h-2V7h2v6z\'/></svg>'
+            " />
+      </div>
+      <div class="max-w-full">
+        <h1 class="text-[clamp(1.25rem,2.5vw,2.5rem)] font-extrabold text-[#003366] dark:text-blue-400">
+          IMTSAT (VIII - X)
+        </h1>
+
+        <p
+          class="mt-1 text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-600 dark:text-gray-400 leading-snug transition-colors">
+          Institute of Modern Technology
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div>
+        <img
+          class="w-full max-w-[80px] aspect-square bg-blue-100 dark:bg-blue-900 border-2 border-blue-800 dark:border-blue-400 rounded-full shadow-inner transition-colors duration-300 object-cover"
+          src="/Pictures/logo.png" alt="IMT Logo" loading="lazy" onerror="
+              this.src =
+                'data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23003366\'><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6zm4 4h-2v-2h2v2zm0-4h-2V7h2v6z\'/></svg>'
+            " />
+      </div>
+      <div class="max-w-full">
+        <h1 class="text-[clamp(1.25rem,2.5vw,2.5rem)] font-extrabold text-[#003366] dark:text-blue-400">
+          VIII-X Scholarship Assessment Test
+        </h1>
+
+        <p
+          class="mt-1 text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-600 dark:text-gray-400 leading-snug transition-colors">
+          Institute of Modern Technology
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <header>
+    <div class="department">
+      <div class="DLogo"></div>
+      <div class="Dinfo">
+        <p class="Dname">Department of Education</p>
+        <p class="InstName">Institute of Modern Technology</p>
+      </div>
+    </div>
+    <div class="department">
+      <div class="DLogo"></div>
+      <div class="Dinfo">
+        <p class="Dname">Department of Education</p>
+        <p class="InstName">Institute of Modern Technology</p>
+      </div>
+    </div>
+    <div class="department">
+      <div class="DLogo"></div>
+      <div class="Dinfo">
+        <p class="Dname">Department of Education</p>
+        <p class="InstName">Institute of Modern Technology</p>
+      </div>
+    </div>
+  </header>
+
+  <nav
+    class="bg-[#0056b3] dark:bg-gray-950 text-white px-4 md:px-10 flex flex-col md:flex-row justify-between items-center sticky top-0 z-40 shadow-md transition-colors duration-300 border-b border-blue-700 dark:border-gray-800">
+    <ul class="flex flex-wrap items-center gap-6 text-sm font-semibold uppercase py-3">
+      <li>
+        <button onclick="switchPage('home-page')" id="nav-home"
+          class="nav-link text-yellow-300 border-b-2 border-yellow-300 pb-1 transition">
+          <i class="fa-solid fa-house"></i>
+        </button>
+      </li>
+      <li>
+        <button onclick="switchPage('about-us')" id="nav-about" class="nav-link hover:text-yellow-300 transition pb-1">
+          About IMT
+        </button>
+      </li>
+
+      <!-- 🌟 NOTUN SCHEMES DROPDOWN MENU (MOBILE PERFECT) -->
+      <li class="relative group flex flex-col items-center md:block" id="scholarship-dropdown">
+        <button onclick="toggleDropdown(event)"
+          class="nav-link hover:text-yellow-300 transition pb-1 flex items-center justify-center gap-1 w-full md:w-auto outline-none">
+          Scholarships
+          <!-- Dropdown Arrow Icon -->
+          <svg id="dropdown-arrow"
+            class="w-4 h-4 transition-transform duration-300 md:group-hover:rotate-180 pointer-events-none" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+
+        <!-- Dropdown List -->
+        <div id="dropdown-menu"
+          class="absolute top-full left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 w-64 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-xl rounded-md overflow-hidden opacity-0 invisible md:group-hover:opacity-100 md:group-hover:visible transition-all duration-300 border border-gray-200 dark:border-gray-700 z-[100]">
+          <ul class="flex flex-col text-sm text-left capitalize font-medium w-full">
+            <li>
+              <button onclick="switchPage('scheme-1')"
+                class="block w-full text-left px-4 py-3 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-[#0056b3] dark:hover:text-blue-300 border-b border-gray-100 dark:border-gray-700 transition-colors">
+                1. Upper primary (VI - VIII)
+              </button>
+            </li>
+            <li>
+              <button onclick="switchPage('scheme-2')"
+                class="block w-full text-left px-4 py-3 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-[#0056b3] dark:hover:text-blue-300 border-b border-gray-100 dark:border-gray-700 transition-colors">
+                2. Secondary/Madhyamik (IX - X)
+              </button>
+            </li>
+            <li>
+              <button onclick="switchPage('scheme-3')"
+                class="block w-full text-left px-4 py-3 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-[#0056b3] dark:hover:text-blue-300 border-b border-gray-100 dark:border-gray-700 transition-colors">
+                3. Higher Secondary (XI - XII)
+              </button>
+            </li>
+            <li>
+              <button onclick="switchPage('scheme-4')"
+                class="block w-full text-left px-4 py-3 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-[#0056b3] dark:hover:text-blue-300 transition-colors">
+                4. Special (VIII - X)
+              </button>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!-- DROPDOWN END -->
+
+      <li>
+        <button onclick="switchPage('contact-us')" id="nav-contact"
+          class="nav-link hover:text-yellow-300 transition pb-1">
+          Contact Us
+        </button>
+      </li>
+    </ul>
+
+    <div class="flex items-center w-full md:w-auto mt-2 md:mt-0">
+      <div
+        class="bg-blue-900 dark:bg-gray-800 px-4 py-2 text-sm font-bold border-t md:border-t-0 md:border-l border-blue-700 dark:border-gray-700 text-center flex-grow transition-colors">
+        Portal Status:
+        <span class="text-green-400 tracking-wider animate-pulse">● LIVE</span>
+      </div>
+    </div>
+  </nav>
+
+  <div
+    class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center px-4 md:px-10 py-1.5 text-sm shadow-sm transition-colors duration-300 w-full overflow-hidden">
+    <div
+      class="bg-red-600 dark:bg-red-700 text-white font-bold px-3 py-1 mr-4 whitespace-nowrap rounded-sm flex-shrink-0">
+      LATEST NEWS
+    </div>
+    <div class="flex-grow min-w-0">
+      <marquee behavior="scroll" direction="left" class="text-red-700 dark:text-red-400 font-medium block w-full"
+        onmouseover="this.stop();" onmouseout="this.start();">
+        <ul style="display: flex; align-items: center; gap: 200px;">
+          <li>Registration for IMTSAT is scheduled to open in June 2026.</li>
+          <li>For any inquiries, please feel free to <button style="color: #0056b3; font-style: italic;"
+              onclick="switchPage('contact-us')" id="nav-contact"> Contact Us.</button></li>
+        </ul>
+      </marquee>
+    </div>
+  </div>
+
+  <div class="flex-grow w-full">
+    <main id="home-page" class="page-section max-w-7xl mx-auto px-4 py-8 fade-in">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-6">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div
+              class="bg-white dark:bg-gray-800 border border-purple-100 dark:border-gray-700 p-4 rounded-lg shadow-sm text-center border-b-4 border-b-purple-500 transition-colors">
+              <h3 class="text-3xl font-black text-[#003366] dark:text-blue-400 flex justify-center items-center">
+                <span class="counter" data-target="4">0</span>
+              </h3>
+              <p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase mt-1">
+                Scholarship Schemes
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-800 border border-blue-100 dark:border-gray-700 p-4 rounded-lg shadow-sm text-center border-b-4 border-b-blue-500 transition-colors">
+              <h3 class="text-3xl font-black text-[#003366] dark:text-blue-400 flex justify-center items-center">
+                <span id="live-reg-count" class="counter" data-target="0">0</span>+
+              </h3>
+              <p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase mt-1">
+                Registered
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-800 border border-green-100 dark:border-gray-700 p-4 rounded-lg shadow-sm text-center border-b-4 border-b-green-500 transition-colors">
+              <h3 class="text-3xl font-black text-[#003366] dark:text-blue-400 flex justify-center items-center">
+                ₹<span class="counter" data-target="100">0</span>K+
+              </h3>
+              <p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase mt-1">
+                Scholarship
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-gray-800 border border-amber-100 dark:border-gray-700 p-4 rounded-lg shadow-sm text-center border-b-4 border-b-amber-500 transition-colors">
+              <h3 class="text-3xl font-black text-[#003366] dark:text-blue-400 flex justify-center items-center">
+                <span class="counter" data-target="100">0</span>%
+              </h3>
+              <p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase mt-1">
+                Transparency
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 transition-colors">
+            <h3 class="text-xl font-bold text-[#003366] dark:text-blue-400 mb-4 border-l-4 border-yellow-400 pl-3">
+              Candidate e-Services
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Apply Now Button -->
+              <a href="#" onclick="openServicePopup(event, 'apply')"
+                class="bg-blue-50 dark:bg-gray-700 border border-blue-200 dark:border-gray-600 p-4 rounded hover:bg-blue-600 dark:hover:bg-blue-600 hover:text-white transition group text-center">
+                <div class="text-3xl mb-2">📝</div>
+                <h4 class="font-bold text-[#003366] dark:text-blue-300 group-hover:text-white">Apply Now</h4>
+                <p class="text-xs mt-1 opacity-80 dark:text-gray-300">New Registration</p>
+              </a>
+
+              <!-- Admit Card Button -->
+              <a href="#" onclick="openServicePopup(event, 'admit')"
+                class="bg-green-50 dark:bg-gray-700 border border-green-200 dark:border-gray-600 p-4 rounded hover:bg-green-600 dark:hover:bg-green-600 hover:text-white transition group text-center">
+                <div class="text-3xl mb-2">🎫</div>
+                <h4 class="font-bold text-[#003366] dark:text-blue-300 group-hover:text-white">Admit Card</h4>
+                <p class="text-xs mt-1 opacity-80 dark:text-gray-300">Download PDF</p>
+              </a>
+
+              <!-- Check Result Button -->
+              <a href="#" onclick="openServicePopup(event, 'result')"
+                class="bg-purple-50 dark:bg-gray-700 border border-purple-200 dark:border-gray-600 p-4 rounded hover:bg-purple-600 dark:hover:bg-purple-600 hover:text-white transition group text-center">
+                <div class="text-3xl mb-2">📊</div>
+                <h4 class="font-bold text-[#003366] dark:text-blue-300 group-hover:text-white">Check Result</h4>
+                <p class="text-xs mt-1 opacity-80 dark:text-gray-300">View Rank Card</p>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-inner transition-colors">
+            <h3 class="text-lg font-bold text-[#003366] dark:text-blue-400 mb-4 flex items-center gap-2">
+              <span>🔍</span> Check Your Eligibility
+            </h3>
+            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <select id="studentClass"
+                class="w-full sm:w-2/3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-medium rounded px-4 py-2.5 focus:outline-none focus:border-blue-500">
+                <option value="none">-- Select Current Class --</option>
+                <option value="6-7">Class VIII to X</option>
+                <option value="other_school">Other School Classes</option>
+                <option value="college">College Student</option>
+              </select>
+              <button onclick="checkEligibility()"
+                class="w-full sm:w-1/3 bg-[#0056b3] dark:bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded transition shadow">
+                Verify
+              </button>
+            </div>
+            <div id="eligibilityResult" class="hidden mt-4 p-3 rounded border fade-in">
+              <p id="resultText" class="font-bold text-lg"></p>
+              <p id="resultSubtext" class="text-sm mt-1"></p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 transition-colors">
+            <h3 class="text-xl font-bold text-[#003366] dark:text-blue-400 mb-4 border-l-4 border-yellow-400 pl-3">
+              Frequently Asked Questions
+            </h3>
+            <div class="space-y-4">
+              <details
+                class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-600 cursor-pointer group transition-colors">
+                <summary
+                  class="font-bold text-gray-800 dark:text-gray-100 list-none flex justify-between items-center outline-none">
+                  Who is eligible to apply for IMTSAT 2026?
+                  <span
+                    class="text-blue-500 font-bold text-xl group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <p
+                  class="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed border-t border-gray-200 dark:border-gray-600 pt-2">
+                  Currently, students studying in Class VIII, IX and X are
+                  fully eligible to apply for the IMTSAT 2026 assessment. They
+                  must be enrolled in a recognized school.
+                </p>
+              </details>
+
+              <details
+                class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-600 cursor-pointer group transition-colors">
+                <summary
+                  class="font-bold text-gray-800 dark:text-gray-100 list-none flex justify-between items-center outline-none">
+                  Is there any negative marking in the exam?
+                  <span
+                    class="text-blue-500 font-bold text-xl group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <p
+                  class="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed border-t border-gray-200 dark:border-gray-600 pt-2">
+                  No, there is absolutely no negative marking in the IMTSAT
+                  2026. Students are encouraged to attempt all 50 questions.
+                </p>
+              </details>
+
+              <details
+                class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-600 cursor-pointer group transition-colors">
+                <summary
+                  class="font-bold text-gray-800 dark:text-gray-100 list-none flex justify-between items-center outline-none">
+                  How will the Top 3 Scholarships be distributed?
+                  <span
+                    class="text-blue-500 font-bold text-xl group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <p
+                  class="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed border-t border-gray-200 dark:border-gray-600 pt-2">
+                  Rank 1 will receive ₹10,000, Rank 2 will receive ₹6,000, and
+                  Rank 3 will receive ₹4,000. The amount will be transferred
+                  directly to the parent's or student's bank account.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1">
+          <div
+            class="bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 rounded overflow-hidden h-full flex flex-col transition-colors">
+            <div class="bg-[#003366] text-white px-4 py-3 font-bold text-lg flex justify-between items-center">
+              <span>Public Notices</span>
+              <span class="text-xs bg-red-500 px-2 py-0.5 rounded shadow">Live</span>
+            </div>
+            <div id="dynamic-notices" class="flex-grow overflow-y-auto notice-scroll p-4 space-y-4 max-h-[600px]">
+
+              <!-- Skeleton Loading Animation -->
+              <div class="animate-pulse space-y-6 py-2">
+
+                <!-- Skeleton Category 1 -->
+                <div>
+                  <!-- Skeleton Category Header -->
+                  <div class="flex items-center mb-3">
+                    <div class="h-7 w-28 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                    <div class="flex-grow border-t border-gray-200 dark:border-gray-700 ml-3"></div>
+                  </div>
+                  <!-- Skeleton Notice Items -->
+                  <div class="space-y-4 pl-2">
+                    <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-4 py-1 space-y-2.5">
+                      <div class="h-3.5 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+                      <div class="h-3.5 bg-gray-200 dark:bg-gray-700 rounded w-1/2"></div>
+                      <div class="h-3 bg-gray-300 dark:bg-gray-600 rounded w-24 mt-2"></div> <!-- Skeleton Link -->
+                    </div>
+                    <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-4 py-1 space-y-2.5">
+                      <div class="h-3.5 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
+                      <div class="h-3 bg-gray-300 dark:bg-gray-600 rounded w-20 mt-2"></div> <!-- Skeleton Link -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Skeleton Category 2 -->
+                <div>
+                  <!-- Skeleton Category Header -->
+                  <div class="flex items-center mb-3">
+                    <div class="h-7 w-36 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                    <div class="flex-grow border-t border-gray-200 dark:border-gray-700 ml-3"></div>
+                  </div>
+                  <!-- Skeleton Notice Items -->
+                  <div class="space-y-4 pl-2">
+                    <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-4 py-1 space-y-2.5">
+                      <div class="h-3.5 bg-gray-200 dark:bg-gray-700 rounded w-full"></div>
+                      <div class="h-3.5 bg-gray-200 dark:bg-gray-700 rounded w-2/3"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- End Skeleton -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="about-us" class="page-section hidden max-w-5xl mx-auto px-4 py-10 fade-in">
+      <div
+        class="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 transition-colors">
+        <div class="text-center mb-10 border-b-2 border-gray-200 dark:border-gray-700 pb-6">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] dark:text-blue-400">
+            About the Institute
+          </h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-2 font-medium">
+            Empowering the next generation through technology, innovation and student opportunities.
+          </p>
+        </div>
+
+        <div class="mb-10">
+          <h3 class="text-2xl font-bold text-[#003366] dark:text-blue-300 border-l-4 border-blue-500 pl-3 mb-4">
+            Who We Are
+          </h3>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          <p>The <strong>Institute of Modern Technology (IMT)</strong> is a technology-driven organization committed to
+            building meaningful impact through innovation, digital solutions, and educational initiatives.</p>
+          <br>
+          <p>Established with the vision of combining <strong>technology, knowledge, and opportunity,</strong> our
+            organization operates across multiple domains including <strong>IT Services, Technical Support, Web
+              Application Development, and Mobile Application Development, delivering modern solutions for individuals,
+              institutions, and businesses.</strong></p>
+          <br>
+          <p>Beyond technology services, we strongly believe that innovation becomes truly meaningful when it creates
+            opportunities for people. With this purpose, we actively conduct educational and student-focused initiatives
+            that encourage young learners to explore the possibilities of the modern digital world.</p>
+          <br>
+          <p>One of our key initiatives is our <strong>Scholarship and Student Awareness Program,</strong> created to
+            identify potential, support academic growth, and inspire students to engage with emerging fields such as
+            <strong>Artificial Intelligence (AI), technology, digital innovation, and future-ready skills.</strong>
+          </p>
+          <br>
+          <p>Our scholarship initiatives are designed not only to provide <strong>financial support and
+              recognition</strong> but also to create awareness among students about how education and technology
+            together can shape stronger opportunities for the future.</p>
+          <br>
+          <p>At <strong>Institute of Modern Technology (IMT)</strong>, we believe education should go beyond traditional
+            boundaries. Students should be encouraged to think creatively, adapt confidently, and develop the mindset
+            required to succeed in a rapidly evolving world.</p>
+          <br>
+          <p>Through assessments, awareness activities, educational campaigns, and technology-driven initiatives, we aim
+            to contribute toward building a more informed, innovative, and opportunity-driven generation.</p>
+          </p>
+        </div>
+
+        <div
+          class="mb-10 bg-blue-50 dark:bg-gray-700 p-6 md:p-8 rounded-xl border border-blue-100 dark:border-gray-600 shadow-inner">
+          <h3 class="text-2xl font-bold text-[#003366] dark:text-blue-300 flex items-center gap-2 mb-3">
+            <span class="text-blue-600 text-3xl">👁️</span> Our Vision
+          </h3>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify italic">
+            "To create an ecosystem where technology, education, and opportunity work together to empower every student
+            and inspire innovation for a better future."
+          </p>
+        </div>
+        <div
+          class="mb-10 bg-blue-50 dark:bg-gray-700 p-6 md:p-8 rounded-xl border border-blue-100 dark:border-gray-600 shadow-inner">
+          <h3 class="text-2xl font-bold text-[#003366] dark:text-blue-300 flex items-center gap-2 mb-3">
+            <span class="text-blue-600 text-3xl">🚀</span> Our Mission
+          </h3>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify italic">
+            To bridge the gap between education and modern technology by creating accessible opportunities, spreading
+            awareness, encouraging innovation, and supporting students in their journey toward future success.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 class="text-2xl font-bold text-[#003366] dark:text-blue-300 border-l-4 border-yellow-400 pl-3 mb-4">
+              Our Objectives
+            </h3>
+            <ul class="list-none space-y-3">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✔</span><span class="text-gray-700 dark:text-gray-300">Identify and
+                  Support students through scholarships and educational opportunities</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✔</span><span class="text-gray-700 dark:text-gray-300">Provide
+                  Promote awareness of Artificial Intelligence and emerging technologies</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✔</span><span class="text-gray-700 dark:text-gray-300">Promote a
+                  Encourage innovation, creativity, and future-oriented thinking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✔</span><span class="text-gray-700 dark:text-gray-300">Identify and
+                  Build confidence in digital learning and modern skill development</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✔</span><span class="text-gray-700 dark:text-gray-300">Provide
+                  Recognize academic excellence and student potential</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500 mt-0.5">✔</span><span class="text-gray-700 dark:text-gray-300">Promote a
+                  Contribute toward a more accessible and technology-aware educational environment</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-[#003366] dark:text-blue-300 border-l-4 border-purple-500 pl-3 mb-4">
+              Core Functions
+            </h3>
+            <ul class="list-none space-y-3">
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 mt-0.5">✦</span><span class="text-gray-700 dark:text-gray-300">IT Services
+                  and Technical Support</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 mt-0.5">✦</span><span class="text-gray-700 dark:text-gray-300">Web
+                  Application Development</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 mt-0.5">✦</span><span class="text-gray-700 dark:text-gray-300">Mobile
+                  Application Development</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 mt-0.5">✦</span><span class="text-gray-700 dark:text-gray-300">Scholarship
+                  Assessment Programs</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 mt-0.5">✦</span><span class="text-gray-700 dark:text-gray-300">Educational
+                  Awareness Campaigns</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 mt-0.5">✦</span><span class="text-gray-700 dark:text-gray-300">AI and
+                  Technology Awareness Initiatives</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 mt-0.5">✦</span><span class="text-gray-700 dark:text-gray-300">Student
+                  Recognition and Development Activities</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact-us" class="page-section hidden max-w-4xl mx-auto px-4 py-10 fade-in">
+      <div
+        class="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 text-center transition-colors">
+        <div class="mb-8 border-b-2 border-gray-200 dark:border-gray-700 pb-6">
+          <h2 class="text-3xl font-extrabold text-[#003366] dark:text-blue-400">
+            Contact Information
+          </h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-2 font-medium">
+            We are here to help you with any queries regarding IMTSAT.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+          <div
+            class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg border border-blue-100 dark:border-gray-600 flex flex-col items-center text-center transition-colors">
+            <span class="text-4xl mb-3">📧</span>
+            <h4 class="font-bold text-[#003366] dark:text-blue-300">
+              Email Support
+            </h4>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+              <a href="mailto:info.sat@gmail.com">imtechnologyindia@gmail.com</a>
+            </p>
+          </div>
+          <div
+            class="bg-green-50 dark:bg-gray-700 p-6 rounded-lg border border-green-100 dark:border-gray-600 flex flex-col items-center text-center transition-colors">
+            <span class="text-4xl mb-3">📞</span>
+            <h4 class="font-bold text-[#003366] dark:text-blue-300">
+              Helpline Number
+            </h4>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+              <a href="tel:+919002352549">+91-9002352549</a>
+            </p>
+          </div>
+          <div
+            class="bg-yellow-50 dark:bg-gray-700 p-6 rounded-lg border border-yellow-100 dark:border-gray-600 flex flex-col items-center text-center transition-colors">
+            <span class="text-4xl mb-3">🏢</span>
+            <h4 class="font-bold text-[#003366] dark:text-blue-300">
+              Head Office
+            </h4>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+              <a href="https://maps.app.goo.gl/TFMbHcZKvqYiCBvFA" target="_blank" rel="noopener noreferrer"> Head
+                Office,
+                Malda, West Bengal, 732207</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Terms & Conditions -->
+    <section id="terms-page" class="page-section hidden max-w-5xl mx-auto px-4 py-10 fade-in">
+
+      <div
+        class="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 transition-colors">
+
+        <!-- Header -->
+        <div class="mb-10 border-b-2 border-gray-200 dark:border-gray-700 pb-6 text-center">
+          <h2 class="text-3xl font-extrabold text-[#003366] dark:text-blue-400">
+            Terms & Conditions
+          </h2>
+          <p class="text-gray-500 dark:text-gray-400 mt-2 font-medium">
+            Please read the following terms carefully before registering for IMTSAT 2026.
+          </p>
+        </div>
+
+        <!-- Terms Content -->
+        <div class="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              1. General Terms
+            </h3>
+            <p class="mt-2">
+              Participation in the IMTSAT 2026 (Institute of Modern Technology
+              Scholarship Assessment Test) implies that the candidate and
+              parent/guardian have read, understood, and agreed to all the terms and
+              conditions stated herein.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              2. Eligibility
+            </h3>
+            <p class="mt-2">
+              Candidates must fulfill the prescribed eligibility criteria (Class VI–VIII)
+              at the time of application. Any deviation may lead to rejection or
+              cancellation of candidature.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              3. Application and Registration
+            </h3>
+            <p class="mt-2">
+              The application must be filled accurately and completely. shall not
+              be responsible for any incorrect information submitted by the applicant.
+              Applications once submitted shall not be modified or cancelled.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              4. Admit Card
+            </h3>
+            <p class="mt-2">
+              Admit cards must be downloaded and printed before the examination.
+              Entry to the examination hall will not be permitted without a valid
+              admit card.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              5. Examination Conduct
+            </h3>
+            <p class="mt-2">
+              Candidates must adhere strictly to the examination guidelines. Any form
+              of unfair means, malpractice, or misconduct shall result in immediate
+              disqualification. reserves the right to take disciplinary action as
+              deemed appropriate.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              6. Evaluation and Results
+            </h3>
+            <p class="mt-2">
+              The evaluation process shall be conducted as per standards. Results
+              and merit lists declared by shall be final and binding. No requests
+              for re-evaluation or rechecking shall be entertained.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              7. Scholarship Policy
+            </h3>
+            <p class="mt-2">
+              Scholarships will be awarded strictly on merit basis. reserves the
+              right to modify or withdraw scholarship benefits at its discretion.
+              Scholarship claims are subject to verification of documents and
+              eligibility.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              8. Use of Candidate Information
+            </h3>
+            <p class="mt-2">
+              reserves the right to use the candidate’s name, photograph, rank,
+              score, and academic details for academic, promotional, and institutional
+              purposes without any obligation of compensation.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              9. Data Privacy
+            </h3>
+            <p class="mt-2">
+              Personal information provided by candidates will be used solely for
+              examination and communication purposes. shall take reasonable
+              measures to ensure data protection but shall not be held liable for any
+              unauthorized access beyond its control.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              10. Limitation of Liability
+            </h3>
+            <p class="mt-2">
+              shall not be liable for any loss, delay, or disruption caused due
+              to unforeseen circumstances including but not limited to natural
+              calamities, technical issues, or administrative reasons.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              11. Right to Amend
+            </h3>
+            <p class="mt-2">
+              reserves the absolute right to amend, modify, or update these terms
+              and conditions at any time without prior notice.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              12. Jurisdiction
+            </h3>
+            <p class="mt-2">
+              All disputes shall be subject to the jurisdiction of the competent
+              courts as determined by .
+            </p>
+          </div>
+
+          <!-- Note -->
+          <div class="mt-8 bg-yellow-50 dark:bg-gray-700 border-l-4 border-yellow-400 p-5 rounded-md">
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              📌 Note: By registering for IMTSAT 2026, the candidate and
+              parent/guardian acknowledge and accept all the above terms and
+              conditions.
+            </p>
+          </div>
+          <!-- Button -->
+          <div class="mt-10 text-center">
+            <a href="/"
+              class="inline-block bg-[#003366] hover:bg-blue-800 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition-all duration-300">
+              I Understand
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section id="privacy-page" class="page-section hidden max-w-5xl mx-auto px-4 py-10 fade-in">
+
+      <div
+        class="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 transition-colors">
+
+        <!-- Header -->
+        <div class="mb-10 border-b-2 border-gray-200 dark:border-gray-700 pb-6 text-center">
+          <h2 class="text-3xl font-extrabold text-[#003366] dark:text-blue-400">
+            Privacy Policy
+          </h2>
+
+          <p class="text-gray-500 dark:text-gray-400 mt-2 font-medium">
+            Please read the following privacy policy carefully before using IMTSAT 2026 services.
+          </p>
+        </div>
+
+        <!-- Privacy Content -->
+        <div class="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              1. Introduction
+            </h3>
+
+            <p class="mt-2">
+              Welcome to the official website of IMTSAT (Institute of Education &
+              Innovation Scholarship Admission Test). Your privacy is important to
+              us. This Privacy Policy explains how we collect, use, store, and
+              protect your information when you use our website and services.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              2. Information We Collect
+            </h3>
+
+            <p class="mt-2">
+              We may collect personal information such as name, date of birth,
+              gender, email address, phone number, parent/guardian details,
+              institution name, address, academic information, uploaded documents,
+              and payment-related information during registration or communication.
+            </p>
+
+            <p class="mt-2">
+              Certain technical information including IP address, browser type,
+              device information, operating system, cookies, and website usage data
+              may also be collected automatically.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              3. Use of Information
+            </h3>
+
+            <p class="mt-2">
+              The collected information may be used for registration, examination
+              management, verification, scholarship processing, result publication,
+              communication, customer support, website improvement, security
+              monitoring, and legal compliance purposes.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              4. Payment Information
+            </h3>
+
+            <p class="mt-2">
+              Payments, if applicable, may be processed through secure third-party
+              payment gateways. does not directly store debit card, credit card,
+              banking passwords, or UPI PIN information on its servers.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              5. Cookies Policy
+            </h3>
+
+            <p class="mt-2">
+              Our website may use cookies and similar technologies to improve user
+              experience, analyze website traffic, and remember user preferences.
+              Users may disable cookies through browser settings, though certain
+              features may not function properly.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              6. Sharing of Information
+            </h3>
+
+            <p class="mt-2">
+              does not sell or rent personal information to third parties.
+              Information may be shared with examination authorities, technical
+              service providers, payment gateways, educational partners, or legal
+              authorities when required for operational or legal purposes.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              7. Data Security
+            </h3>
+
+            <p class="mt-2">
+              We take reasonable administrative and technical measures to safeguard
+              user data against unauthorized access, misuse, loss, alteration, or
+              disclosure. However, no online platform can guarantee absolute
+              security.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              8. Student Responsibility
+            </h3>
+
+            <p class="mt-2">
+              Candidates are responsible for providing accurate information and
+              genuine documents during registration. Sharing login credentials with
+              unauthorized persons is discouraged.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              9. Third-Party Links
+            </h3>
+
+            <p class="mt-2">
+              The website may contain links to third-party platforms including
+              payment gateways and educational resources. is not responsible for
+              the privacy practices or content of such external websites.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              10. Children's Privacy
+            </h3>
+
+            <p class="mt-2">
+              IMTSAT services may be accessed by students below the age of 18.
+              Parents or guardians are encouraged to supervise student activities
+              while using the platform.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              11. Communication Policy
+            </h3>
+
+            <p class="mt-2">
+              Registered users may receive examination updates, registration
+              confirmations, scholarship notifications, and important announcements
+              through email, SMS, or other communication channels.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              12. User Rights
+            </h3>
+
+            <p class="mt-2">
+              Users may request access to their information, correction of inaccurate
+              data, deletion requests subject to legal limitations, or withdrawal of
+              communication consent through official contact channels.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              13. Intellectual Property
+            </h3>
+
+            <p class="mt-2">
+              All content available on the IMTSAT website including logos, graphics,
+              text, certificates, examination materials, and branding elements are
+              the intellectual property of unless otherwise stated.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              14. Policy Updates
+            </h3>
+
+            <p class="mt-2">
+              reserves the right to modify or update this Privacy Policy at any
+              time without prior notice. Updated policies become effective
+              immediately upon publication on the website.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              15. Contact Information
+            </h3>
+
+            <p class="mt-2">
+              For privacy-related questions or concerns, users may contact
+              through the official website contact page or official support email.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg text-[#003366] dark:text-blue-300">
+              16. Consent
+            </h3>
+
+            <p class="mt-2">
+              By accessing or using the IMTSAT website, users confirm that they have
+              read, understood, and agreed to this Privacy Policy.
+            </p>
+          </div>
+
+          <!-- Note -->
+          <div class="mt-8 bg-yellow-50 dark:bg-gray-700 border-l-4 border-yellow-400 p-5 rounded-md">
+
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              📌 Note: values user privacy and is committed to protecting
+              personal information with reasonable security measures and responsible
+              data practices.
+            </p>
+          </div>
+
+          <!-- Button -->
+          <div class="mt-10 text-center">
+            <a href="/"
+              class="inline-block bg-[#003366] hover:bg-blue-800 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition-all duration-300">
+              I Understand
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+           SCHEME 1: Upper Primary (6-8)
+           ========================================== -->
+    <section id="scheme-1" class="page-section hidden max-w-5xl mx-auto px-4 py-10 fade-in">
+      <!-- Top Bar with Title & Buttons -->
+      <div
+        class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center mb-6 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+        <h2 class="text-2xl font-extrabold text-[#003366] dark:text-blue-400 mb-4 md:mb-0">Upper Primary (Class VI-VIII)
+        </h2>
+        <div class="flex gap-3 w-full md:w-auto">
+          <button onclick="downloadSpecificPDF(event, 'content-scheme-1', 'SAT_Upper_Primary_Bulletin.pdf')"
+            class="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-[#003366] font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">
+            ⬇️ Download
+          </button>
+          <a href="/Registration/UpperPrimary/"
+            class="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">
+            📝 Apply Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Bulletin Content Area (This gets downloaded as PDF) -->
+      <div id="content-scheme-1" class="overflow-y-auto p-4 md:p-8 flex-grow">
+        <div id="bulletin-canvas-area"
+          class="bg-white p-8 md:p-12 rounded border border-gray-200 shadow-sm text-gray-800 text-sm leading-relaxed max-w-4xl mx-auto font-sans">
+          <div class="text-center mb-8 border-b-4 border-[#003366] pb-6">
+            <h1 class="text-4xl font-black text-[#003366] tracking-wide">
+              IMTSAT 2026
+            </h1>
+            <h2
+              class="text-xl font-bold mt-2 text-gray-800 uppercase tracking-widest bg-yellow-100 inline-block px-4 py-1 rounded">
+              Information Bulletin
+            </h2>
+            <p class="text-gray-600 font-bold mt-3">
+              (Institute of Modern Technology – Scholarship Assessment
+              Test)
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                1. Introduction
+              </h3>
+              <p class="pl-4">
+                The Institute of Modern Technology () conducts the
+                IMTSAT 2026 to identify talented students and award
+                scholarships based on academic performance. The exam
+                encourages students to excel and supports them financially.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  2. Eligibility Criteria
+                </h3>
+                <ul class="list-disc pl-8 space-y-1 font-semibold text-gray-700">
+                  <li>
+                    Students of
+                    <span class="text-blue-600">Class VIII to X</span> are
+                    eligible.
+                  </li>
+                  <li>Must be enrolled in a recognized school.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  3. Examination Details
+                </h3>
+                <ul class="list-none pl-4 space-y-1">
+                  <li><strong>Mode:</strong> Offline (Pen-Paper Based)</li>
+                  <li><strong>Duration:</strong> 1 Hours (60 Minutes)</li>
+                  <li><strong>Exam Time:</strong> 12:00 PM - 01:00 PM</li>
+                  <li><strong>Reporting:</strong> 10:00 AM – 11:30 AM</li>
+                  <li class="text-red-600 font-bold">
+                    Gate Closing: 11:30 AM (No entry after this)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-3 bg-gray-50 py-1">
+                4. Exam Pattern & Marking Scheme
+              </h3>
+              <div class="overflow-x-auto border border-gray-300 rounded-lg md:ml-4 mb-2">
+                <table class="w-full text-left text-sm">
+                  <thead class="bg-[#003366] text-white">
+                    <tr>
+                      <th class="py-2 px-4 border-r border-blue-800">
+                        Subject
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Questions
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Marks per Q.
+                      </th>
+                      <th class="py-2 px-4 text-center">Total Marks</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">English</td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        Mathematics
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">Reasoning</td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        General Knowledge
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr class="bg-yellow-100 font-bold text-[#003366]">
+                      <td class="py-2 px-4 border-r">Grand Total</td>
+                      <td class="py-2 px-4 border-r text-center">50</td>
+                      <td class="py-2 px-4 border-r text-center">—</td>
+                      <td class="py-2 px-4 text-center">100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p
+                class="mt-3 ml-4 font-bold text-green-700 bg-green-50 inline-block px-3 py-1 border border-green-200 rounded">
+                ❌ No Negative Marking
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-4 bg-gray-50 py-1">
+                5. Detailed Syllabus
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 ml-4">
+                <div class="bg-blue-50/50 p-3 rounded border border-blue-100">
+                  <h4 class="font-bold text-blue-800 border-b border-blue-200 pb-1 mb-2">
+                    📖 English
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Reading Comprehension</strong>
+                      <p>Unseen passages (factual, literary, discursive), Vocabulary in context (synonyms, antonyms),
+                        Inference-based questions, Theme / central idea etc.</p>
+                    </li>
+                    <li>
+                      <strong>Grammar & Usage</strong>
+                      <p>Parts of speech, Tenses (basic to intermediate), Active & passive voice, Direct & indirect
+                        speech, Articles & determiners, Prepositions, Conjunctions, Sentence transformation etc.</p>
+                    </li>
+                    <li>
+                      <strong>Vocabulary</strong>
+                      <p>Synonyms & antonyms, Idioms & phrases, One-word substitutions, Word usage in sentences etc.</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-red-50/50 p-3 rounded border border-red-100">
+                  <h4 class="font-bold text-red-800 border-b border-red-200 pb-1 mb-2">
+                    ➗ Mathematics
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Number System</strong>
+                      <p>
+                        Knowing Our Numbers, Whole Numbers, Playing with
+                        Numbers, Factors and Multiples, Prime and Composite
+                        Numbers, Even and Odd Numbers, Divisibility Rules,
+                        Roman Numerals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Arithmetic Operations</strong>
+                      <p>
+                        Addition and Subtraction of Whole Numbers,
+                        Multiplication of Whole Numbers, Division of Whole
+                        Numbers, Properties of Numbers (commutative,
+                        associative, distributive) etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong> Fractions & Decimals</strong>
+                      <p>
+                        Fractions (basics and types), Equivalent Fractions,
+                        Simplification of Fractions, Addition and Subtraction
+                        of Fractions, Decimals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geometry</strong>
+                      <p>
+                        Basic Geometrical Ideas (point, line, ray, segment),
+                        Angles (types and measurement), Triangles and
+                        Quadrilaterals, Circles, Symmetry, Construction of
+                        Basic Shapes etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Data Handling & Mensuration</strong>
+                      <p>
+                        Data Handling (pictographs, bar graphs), Perimeter,
+                        Area etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Algebra & Patterns</strong>
+                      <p>
+                        Introduction to Algebra, Simple Expressions, Patterns
+                        and Sequences etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-purple-50/50 p-3 rounded border border-purple-100">
+                  <h4 class="font-bold text-purple-800 border-b border-purple-200 pb-1 mb-2">
+                    🧠 Reasoning
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Basic Logical Reasoning</strong>
+                      <p>
+                        Coding-Decoding, Blood Relation, Direction Sence Test,
+                        Analogy, Classification (Odd One Out), Alphabet
+                        Series, Number Series, Missing Characters
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Puzzle & Arrangement</strong>
+                      <p>
+                        Linear Seating Arrangement, Circular Seating
+                        Arrangement, Square/Rectangular Arrangement,
+                        Floor-Based Puzzle, Box-Based Puzzle, Scheduling
+                        Puzzle Tabulation Puzzle
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Visual & Spatial Reasoning</strong>
+                      <p>
+                        Cubes and Dice, Paper Folding, Paper Cutting, Mirror
+                        Images, Water Images, Embedded Figures, Figure
+                        Counting
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Analytical Reasoning</strong>
+                      <p>
+                        Syllogism, Statement and Conclusion, Statement and
+                        Assumptions, Statement and Arguments, Inference, Data
+                        Sufficiency, Decision Making
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-green-50/50 p-3 rounded border border-green-100">
+                  <h4 class="font-bold text-green-800 border-b border-green-200 pb-1 mb-2">
+                    🌍 General Knowledge / General Studies
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <!-- li>strong*p -->
+                    <li>
+                      <strong>History</strong>
+                      <p>
+                        Ancient, Medieval, and Modern History Indian Freedom
+                        Movement etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geography</strong>
+                      <p>
+                        Physical Geography (mountains, rivers, climate, Dam
+                        etc.,), Indian Geography (states, resources,
+                        agriculture etc,)
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Polity</strong>
+                      <p>Constitution of India (Basic), Fundamental Rights(Basic) etc.</p>
+                    </li>
+                    <!-- <li>
+                        <strong>Economics</strong>
+                        <p>Basic Economics (demand, supply), Indian Economy (budget, GDP, inflation), Banking & Financial System</p>
+                      </li>
+                      <li> -->
+                    <strong>General Science</strong>
+                    <p>
+                      Physics (motion, energy, laws), Chemistry (reactions,
+                      elements), Biology (human body, plants, animals) etc.
+                    </p>
+                    </li>
+                    <li>
+                      <strong>Current Affairs</strong>
+                      <p>
+                        National & International News, Government schemes
+                        Sports, Awards, Appointments, Science & Technology
+                        updates etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Culture & Miscellaneous</strong>
+                      <p>
+                        Indian Culture (dance, music, festivals), Books &
+                        Authors Important Days, Awards & Honors
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Static GK (General Awareness)</strong>
+                      <p>
+                        Capitals & Countries, Important Organizations (UN, WHO),Famous Personalities, National Symbols
+                        etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  6. Application Process
+                </h3>
+                <ol class="list-decimal pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Visit official website. <a href="https://sat.vercel.app/" style="color: blue;">i.e.
+                      www.sat.com</a>
+                  </li>
+                  <li>Fill details & upload documents.</li>
+                  <li>Pay ₹300 & Submit form.</li>
+                  <li>Download confirmation.</li>
+                </ol>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  7. Admit Card
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Available online before exam.</li>
+                  <li class="text-red-600 font-bold">
+                    Entry without printed admit card is strictly prohibited.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  8. Exam Day Rules
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Carry valid ID proof.</li>
+                  <li>Use only blue/black ballpoint pen.</li>
+                  <li>No electronic devices allowed.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 p-5 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-1">
+                    🏆 9. Scholarship & Awards
+                  </h3>
+                  <p class="text-amber-600 font-black text-lg">
+                    Rank 1: ₹10,000 + Certificate
+                  </p>
+                  <p class="text-amber-500 font-bold text-lg">
+                    Rank 2: ₹6,000 + Certificate
+                  </p>
+                  <p class="text-amber-400 font-medium text-lg">
+                    Rank 3: ₹4,000 + Certificate
+                  </p>
+                  <p class="text-gray-600 text-sm mt-1">
+                    <strong>Rank 4 & 5: ₹1,000 + Certificate</strong>
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1" style="font-weight: 700;">
+                    Rank 6 to 20: Gifts + Certificate
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1">
+                    Other top performers will receive merit certificates.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-2">
+                    📞 10. Contact Info
+                  </h3>
+                  <div class="space-y-1 text-sm text-gray-800">
+                    <p><strong>Email: </strong> <a href="mailto:info.sat@gmail.com"> info.sat@gmail.com</a></p>
+                    <p><strong>Helpline:</strong>
+                      <a href="tel:+919002352549">+91-9002352549</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t-2 border-red-500 pt-4 mt-6">
+              <h3 class="font-bold text-red-600 uppercase tracking-widest text-xs mb-1">
+                Disclaimer
+              </h3>
+              <p class="text-xs text-gray-500 italic">
+                The Institute reserves the right to change any rules,
+                regulations, or examination details without prior notice if
+                necessary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+           SCHEME 2: Secondary / Madhyamik (9-10)
+           ========================================== -->
+    <section id="scheme-2" class="page-section hidden max-w-5xl mx-auto px-4 py-10 fade-in">
+      <div
+        class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center mb-6 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+        <h2 class="text-2xl font-extrabold text-[#003366] dark:text-blue-400 mb-4 md:mb-0">Secondary (Class 9-10)</h2>
+        <div class="flex gap-3 w-full md:w-auto">
+          <button onclick="downloadSpecificPDF(event, 'content-scheme-2', 'SAT_Secondary_Bulletin.pdf')"
+            class="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-[#003366] font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">⬇️
+            Download</button>
+          <a href="/Registration/Secondary/"
+            class="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">📝
+            Apply Now</a>
+        </div>
+      </div>
+      <div id="content-scheme-2" class="overflow-y-auto p-4 md:p-8 flex-grow">
+        <div id="bulletin-canvas-area"
+          class="bg-white p-8 md:p-12 rounded border border-gray-200 shadow-sm text-gray-800 text-sm leading-relaxed max-w-4xl mx-auto font-sans">
+          <div class="text-center mb-8 border-b-4 border-[#003366] pb-6">
+            <h1 class="text-4xl font-black text-[#003366] tracking-wide">
+              IMTSAT 2026
+            </h1>
+            <h2
+              class="text-xl font-bold mt-2 text-gray-800 uppercase tracking-widest bg-yellow-100 inline-block px-4 py-1 rounded">
+              Information Bulletin
+            </h2>
+            <p class="text-gray-600 font-bold mt-3">
+              (Institute of Modern Technology – Scholarship Assessment
+              Test)
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                1. Introduction
+              </h3>
+              <p class="pl-4">
+                The Institute of Modern Technology () conducts the
+                IMTSAT 2026 to identify talented students and award
+                scholarships based on academic performance. The exam
+                encourages students to excel and supports them financially.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  2. Eligibility Criteria
+                </h3>
+                <ul class="list-disc pl-8 space-y-1 font-semibold text-gray-700">
+                  <li>
+                    Students of
+                    <span class="text-blue-600">Class VIII to X</span> are
+                    eligible.
+                  </li>
+                  <li>Must be enrolled in a recognized school.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  3. Examination Details
+                </h3>
+                <ul class="list-none pl-4 space-y-1">
+                  <li><strong>Mode:</strong> Offline (Pen-Paper Based)</li>
+                  <li><strong>Duration:</strong> 1 Hours (60 Minutes)</li>
+                  <li><strong>Exam Time:</strong> 12:00 PM - 01:00 PM</li>
+                  <li><strong>Reporting:</strong> 10:00 AM – 11:30 AM</li>
+                  <li class="text-red-600 font-bold">
+                    Gate Closing: 11:30 AM (No entry after this)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-3 bg-gray-50 py-1">
+                4. Exam Pattern & Marking Scheme
+              </h3>
+              <div class="overflow-x-auto border border-gray-300 rounded-lg md:ml-4 mb-2">
+                <table class="w-full text-left text-sm">
+                  <thead class="bg-[#003366] text-white">
+                    <tr>
+                      <th class="py-2 px-4 border-r border-blue-800">
+                        Subject
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Questions
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Marks per Q.
+                      </th>
+                      <th class="py-2 px-4 text-center">Total Marks</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">English</td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        Mathematics
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">Reasoning</td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        General Knowledge
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr class="bg-yellow-100 font-bold text-[#003366]">
+                      <td class="py-2 px-4 border-r">Grand Total</td>
+                      <td class="py-2 px-4 border-r text-center">50</td>
+                      <td class="py-2 px-4 border-r text-center">—</td>
+                      <td class="py-2 px-4 text-center">100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p
+                class="mt-3 ml-4 font-bold text-green-700 bg-green-50 inline-block px-3 py-1 border border-green-200 rounded">
+                ❌ No Negative Marking
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-4 bg-gray-50 py-1">
+                5. Detailed Syllabus
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 ml-4">
+                <div class="bg-blue-50/50 p-3 rounded border border-blue-100">
+                  <h4 class="font-bold text-blue-800 border-b border-blue-200 pb-1 mb-2">
+                    📖 English
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Reading Comprehension</strong>
+                      <p>Unseen passages (factual, literary, discursive), Vocabulary in context (synonyms, antonyms),
+                        Inference-based questions, Theme / central idea etc.</p>
+                    </li>
+                    <li>
+                      <strong>Grammar & Usage</strong>
+                      <p>Parts of speech, Tenses (basic to intermediate), Active & passive voice, Direct & indirect
+                        speech, Articles & determiners, Prepositions, Conjunctions, Sentence transformation etc.</p>
+                    </li>
+                    <li>
+                      <strong>Vocabulary</strong>
+                      <p>Synonyms & antonyms, Idioms & phrases, One-word substitutions, Word usage in sentences etc.</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-red-50/50 p-3 rounded border border-red-100">
+                  <h4 class="font-bold text-red-800 border-b border-red-200 pb-1 mb-2">
+                    ➗ Mathematics
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Number System</strong>
+                      <p>
+                        Knowing Our Numbers, Whole Numbers, Playing with
+                        Numbers, Factors and Multiples, Prime and Composite
+                        Numbers, Even and Odd Numbers, Divisibility Rules,
+                        Roman Numerals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Arithmetic Operations</strong>
+                      <p>
+                        Addition and Subtraction of Whole Numbers,
+                        Multiplication of Whole Numbers, Division of Whole
+                        Numbers, Properties of Numbers (commutative,
+                        associative, distributive) etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong> Fractions & Decimals</strong>
+                      <p>
+                        Fractions (basics and types), Equivalent Fractions,
+                        Simplification of Fractions, Addition and Subtraction
+                        of Fractions, Decimals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geometry</strong>
+                      <p>
+                        Basic Geometrical Ideas (point, line, ray, segment),
+                        Angles (types and measurement), Triangles and
+                        Quadrilaterals, Circles, Symmetry, Construction of
+                        Basic Shapes etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Data Handling & Mensuration</strong>
+                      <p>
+                        Data Handling (pictographs, bar graphs), Perimeter,
+                        Area etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Algebra & Patterns</strong>
+                      <p>
+                        Introduction to Algebra, Simple Expressions, Patterns
+                        and Sequences etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-purple-50/50 p-3 rounded border border-purple-100">
+                  <h4 class="font-bold text-purple-800 border-b border-purple-200 pb-1 mb-2">
+                    🧠 Reasoning
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Basic Logical Reasoning</strong>
+                      <p>
+                        Coding-Decoding, Blood Relation, Direction Sence Test,
+                        Analogy, Classification (Odd One Out), Alphabet
+                        Series, Number Series, Missing Characters
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Puzzle & Arrangement</strong>
+                      <p>
+                        Linear Seating Arrangement, Circular Seating
+                        Arrangement, Square/Rectangular Arrangement,
+                        Floor-Based Puzzle, Box-Based Puzzle, Scheduling
+                        Puzzle Tabulation Puzzle
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Visual & Spatial Reasoning</strong>
+                      <p>
+                        Cubes and Dice, Paper Folding, Paper Cutting, Mirror
+                        Images, Water Images, Embedded Figures, Figure
+                        Counting
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Analytical Reasoning</strong>
+                      <p>
+                        Syllogism, Statement and Conclusion, Statement and
+                        Assumptions, Statement and Arguments, Inference, Data
+                        Sufficiency, Decision Making
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-green-50/50 p-3 rounded border border-green-100">
+                  <h4 class="font-bold text-green-800 border-b border-green-200 pb-1 mb-2">
+                    🌍 General Knowledge / General Studies
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <!-- li>strong*p -->
+                    <li>
+                      <strong>History</strong>
+                      <p>
+                        Ancient, Medieval, and Modern History Indian Freedom
+                        Movement etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geography</strong>
+                      <p>
+                        Physical Geography (mountains, rivers, climate, Dam
+                        etc.,), Indian Geography (states, resources,
+                        agriculture etc,)
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Polity</strong>
+                      <p>Constitution of India (Basic), Fundamental Rights(Basic) etc.</p>
+                    </li>
+                    <!-- <li>
+                        <strong>Economics</strong>
+                        <p>Basic Economics (demand, supply), Indian Economy (budget, GDP, inflation), Banking & Financial System</p>
+                      </li>
+                      <li> -->
+                    <strong>General Science</strong>
+                    <p>
+                      Physics (motion, energy, laws), Chemistry (reactions,
+                      elements), Biology (human body, plants, animals) etc.
+                    </p>
+                    </li>
+                    <li>
+                      <strong>Current Affairs</strong>
+                      <p>
+                        National & International News, Government schemes
+                        Sports, Awards, Appointments, Science & Technology
+                        updates etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Culture & Miscellaneous</strong>
+                      <p>
+                        Indian Culture (dance, music, festivals), Books &
+                        Authors Important Days, Awards & Honors
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Static GK (General Awareness)</strong>
+                      <p>
+                        Capitals & Countries, Important Organizations (UN, WHO),Famous Personalities, National Symbols
+                        etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  6. Application Process
+                </h3>
+                <ol class="list-decimal pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Visit official website. <a href="https://sat.vercel.app/" style="color: blue;">i.e.
+                      www.sat.com</a>
+                  </li>
+                  <li>Fill details & upload documents.</li>
+                  <li>Pay ₹300 & Submit form.</li>
+                  <li>Download confirmation.</li>
+                </ol>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  7. Admit Card
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Available online before exam.</li>
+                  <li class="text-red-600 font-bold">
+                    Entry without printed admit card is strictly prohibited.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  8. Exam Day Rules
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Carry valid ID proof.</li>
+                  <li>Use only blue/black ballpoint pen.</li>
+                  <li>No electronic devices allowed.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 p-5 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-1">
+                    🏆 9. Scholarship & Awards
+                  </h3>
+                  <p class="text-amber-600 font-black text-lg">
+                    Rank 1: ₹10,000 + Certificate
+                  </p>
+                  <p class="text-amber-500 font-bold text-lg">
+                    Rank 2: ₹6,000 + Certificate
+                  </p>
+                  <p class="text-amber-400 font-medium text-lg">
+                    Rank 3: ₹4,000 + Certificate
+                  </p>
+                  <p class="text-gray-600 text-sm mt-1">
+                    <strong>Rank 4 & 5: ₹1,000 + Certificate</strong>
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1" style="font-weight: 700;">
+                    Rank 6 to 20: Gifts + Certificate
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1">
+                    Other top performers will receive merit certificates.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-2">
+                    📞 10. Contact Info
+                  </h3>
+                  <div class="space-y-1 text-sm text-gray-800">
+                    <p><strong>Email: </strong> <a href="mailto:info.sat@gmail.com"> info.sat@gmail.com</a></p>
+                    <p><strong>Helpline:</strong>
+                      <a href="tel:+919002352549">+91-9002352549</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t-2 border-red-500 pt-4 mt-6">
+              <h3 class="font-bold text-red-600 uppercase tracking-widest text-xs mb-1">
+                Disclaimer
+              </h3>
+              <p class="text-xs text-gray-500 italic">
+                The Institute reserves the right to change any rules,
+                regulations, or examination details without prior notice if
+                necessary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+           SCHEME 3: Higher Secondary (11-12)
+           ========================================== -->
+    <section id="scheme-3" class="page-section hidden max-w-5xl mx-auto px-4 py-10 fade-in">
+      <div
+        class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center mb-6 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+        <h2 class="text-2xl font-extrabold text-[#003366] dark:text-blue-400 mb-4 md:mb-0">Higher Secondary (Class
+          11-12)</h2>
+        <div class="flex gap-3 w-full md:w-auto">
+          <button onclick="downloadSpecificPDF(event, 'content-scheme-3', 'SAT_Higher_Secondary_Bulletin.pdf')"
+            class="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-[#003366] font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">⬇️
+            Download</button>
+          <a href="/Registration/HigherSecondary/"
+            class="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">📝
+            Apply Now</a>
+        </div>
+      </div>
+      <div id="content-scheme-3" class="overflow-y-auto p-4 md:p-8 flex-grow">
+        <div id="bulletin-canvas-area"
+          class="bg-white p-8 md:p-12 rounded border border-gray-200 shadow-sm text-gray-800 text-sm leading-relaxed max-w-4xl mx-auto font-sans">
+          <div class="text-center mb-8 border-b-4 border-[#003366] pb-6">
+            <h1 class="text-4xl font-black text-[#003366] tracking-wide">
+              IMTSAT 2026
+            </h1>
+            <h2
+              class="text-xl font-bold mt-2 text-gray-800 uppercase tracking-widest bg-yellow-100 inline-block px-4 py-1 rounded">
+              Information Bulletin
+            </h2>
+            <p class="text-gray-600 font-bold mt-3">
+              (Institute of Modern Technology – Scholarship Assessment
+              Test)
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                1. Introduction
+              </h3>
+              <p class="pl-4">
+                The Institute of Modern Technology () conducts the
+                IMTSAT 2026 to identify talented students and award
+                scholarships based on academic performance. The exam
+                encourages students to excel and supports them financially.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  2. Eligibility Criteria
+                </h3>
+                <ul class="list-disc pl-8 space-y-1 font-semibold text-gray-700">
+                  <li>
+                    Students of
+                    <span class="text-blue-600">Class VIII to X</span> are
+                    eligible.
+                  </li>
+                  <li>Must be enrolled in a recognized school.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  3. Examination Details
+                </h3>
+                <ul class="list-none pl-4 space-y-1">
+                  <li><strong>Mode:</strong> Offline (Pen-Paper Based)</li>
+                  <li><strong>Duration:</strong> 1 Hours (60 Minutes)</li>
+                  <li><strong>Exam Time:</strong> 12:00 PM - 01:00 PM</li>
+                  <li><strong>Reporting:</strong> 10:00 AM – 11:30 AM</li>
+                  <li class="text-red-600 font-bold">
+                    Gate Closing: 11:30 AM (No entry after this)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-3 bg-gray-50 py-1">
+                4. Exam Pattern & Marking Scheme
+              </h3>
+              <div class="overflow-x-auto border border-gray-300 rounded-lg md:ml-4 mb-2">
+                <table class="w-full text-left text-sm">
+                  <thead class="bg-[#003366] text-white">
+                    <tr>
+                      <th class="py-2 px-4 border-r border-blue-800">
+                        Subject
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Questions
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Marks per Q.
+                      </th>
+                      <th class="py-2 px-4 text-center">Total Marks</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">English</td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        Mathematics
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">Reasoning</td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        General Knowledge
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr class="bg-yellow-100 font-bold text-[#003366]">
+                      <td class="py-2 px-4 border-r">Grand Total</td>
+                      <td class="py-2 px-4 border-r text-center">50</td>
+                      <td class="py-2 px-4 border-r text-center">—</td>
+                      <td class="py-2 px-4 text-center">100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p
+                class="mt-3 ml-4 font-bold text-green-700 bg-green-50 inline-block px-3 py-1 border border-green-200 rounded">
+                ❌ No Negative Marking
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-4 bg-gray-50 py-1">
+                5. Detailed Syllabus
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 ml-4">
+                <div class="bg-blue-50/50 p-3 rounded border border-blue-100">
+                  <h4 class="font-bold text-blue-800 border-b border-blue-200 pb-1 mb-2">
+                    📖 English
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Reading Comprehension</strong>
+                      <p>Unseen passages (factual, literary, discursive), Vocabulary in context (synonyms, antonyms),
+                        Inference-based questions, Theme / central idea etc.</p>
+                    </li>
+                    <li>
+                      <strong>Grammar & Usage</strong>
+                      <p>Parts of speech, Tenses (basic to intermediate), Active & passive voice, Direct & indirect
+                        speech, Articles & determiners, Prepositions, Conjunctions, Sentence transformation etc.</p>
+                    </li>
+                    <li>
+                      <strong>Vocabulary</strong>
+                      <p>Synonyms & antonyms, Idioms & phrases, One-word substitutions, Word usage in sentences etc.</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-red-50/50 p-3 rounded border border-red-100">
+                  <h4 class="font-bold text-red-800 border-b border-red-200 pb-1 mb-2">
+                    ➗ Mathematics
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Number System</strong>
+                      <p>
+                        Knowing Our Numbers, Whole Numbers, Playing with
+                        Numbers, Factors and Multiples, Prime and Composite
+                        Numbers, Even and Odd Numbers, Divisibility Rules,
+                        Roman Numerals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Arithmetic Operations</strong>
+                      <p>
+                        Addition and Subtraction of Whole Numbers,
+                        Multiplication of Whole Numbers, Division of Whole
+                        Numbers, Properties of Numbers (commutative,
+                        associative, distributive) etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong> Fractions & Decimals</strong>
+                      <p>
+                        Fractions (basics and types), Equivalent Fractions,
+                        Simplification of Fractions, Addition and Subtraction
+                        of Fractions, Decimals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geometry</strong>
+                      <p>
+                        Basic Geometrical Ideas (point, line, ray, segment),
+                        Angles (types and measurement), Triangles and
+                        Quadrilaterals, Circles, Symmetry, Construction of
+                        Basic Shapes etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Data Handling & Mensuration</strong>
+                      <p>
+                        Data Handling (pictographs, bar graphs), Perimeter,
+                        Area etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Algebra & Patterns</strong>
+                      <p>
+                        Introduction to Algebra, Simple Expressions, Patterns
+                        and Sequences etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-purple-50/50 p-3 rounded border border-purple-100">
+                  <h4 class="font-bold text-purple-800 border-b border-purple-200 pb-1 mb-2">
+                    🧠 Reasoning
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Basic Logical Reasoning</strong>
+                      <p>
+                        Coding-Decoding, Blood Relation, Direction Sence Test,
+                        Analogy, Classification (Odd One Out), Alphabet
+                        Series, Number Series, Missing Characters
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Puzzle & Arrangement</strong>
+                      <p>
+                        Linear Seating Arrangement, Circular Seating
+                        Arrangement, Square/Rectangular Arrangement,
+                        Floor-Based Puzzle, Box-Based Puzzle, Scheduling
+                        Puzzle Tabulation Puzzle
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Visual & Spatial Reasoning</strong>
+                      <p>
+                        Cubes and Dice, Paper Folding, Paper Cutting, Mirror
+                        Images, Water Images, Embedded Figures, Figure
+                        Counting
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Analytical Reasoning</strong>
+                      <p>
+                        Syllogism, Statement and Conclusion, Statement and
+                        Assumptions, Statement and Arguments, Inference, Data
+                        Sufficiency, Decision Making
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-green-50/50 p-3 rounded border border-green-100">
+                  <h4 class="font-bold text-green-800 border-b border-green-200 pb-1 mb-2">
+                    🌍 General Knowledge / General Studies
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <!-- li>strong*p -->
+                    <li>
+                      <strong>History</strong>
+                      <p>
+                        Ancient, Medieval, and Modern History Indian Freedom
+                        Movement etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geography</strong>
+                      <p>
+                        Physical Geography (mountains, rivers, climate, Dam
+                        etc.,), Indian Geography (states, resources,
+                        agriculture etc,)
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Polity</strong>
+                      <p>Constitution of India (Basic), Fundamental Rights(Basic) etc.</p>
+                    </li>
+                    <!-- <li>
+                        <strong>Economics</strong>
+                        <p>Basic Economics (demand, supply), Indian Economy (budget, GDP, inflation), Banking & Financial System</p>
+                      </li>
+                      <li> -->
+                    <strong>General Science</strong>
+                    <p>
+                      Physics (motion, energy, laws), Chemistry (reactions,
+                      elements), Biology (human body, plants, animals) etc.
+                    </p>
+                    </li>
+                    <li>
+                      <strong>Current Affairs</strong>
+                      <p>
+                        National & International News, Government schemes
+                        Sports, Awards, Appointments, Science & Technology
+                        updates etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Culture & Miscellaneous</strong>
+                      <p>
+                        Indian Culture (dance, music, festivals), Books &
+                        Authors Important Days, Awards & Honors
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Static GK (General Awareness)</strong>
+                      <p>
+                        Capitals & Countries, Important Organizations (UN, WHO),Famous Personalities, National Symbols
+                        etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  6. Application Process
+                </h3>
+                <ol class="list-decimal pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Visit official website. <a href="https://sat.vercel.app/" style="color: blue;">i.e.
+                      www.sat.com</a>
+                  </li>
+                  <li>Fill details & upload documents.</li>
+                  <li>Pay ₹300 & Submit form.</li>
+                  <li>Download confirmation.</li>
+                </ol>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  7. Admit Card
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Available online before exam.</li>
+                  <li class="text-red-600 font-bold">
+                    Entry without printed admit card is strictly prohibited.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  8. Exam Day Rules
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Carry valid ID proof.</li>
+                  <li>Use only blue/black ballpoint pen.</li>
+                  <li>No electronic devices allowed.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 p-5 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-1">
+                    🏆 9. Scholarship & Awards
+                  </h3>
+                  <p class="text-amber-600 font-black text-lg">
+                    Rank 1: ₹10,000 + Certificate
+                  </p>
+                  <p class="text-amber-500 font-bold text-lg">
+                    Rank 2: ₹6,000 + Certificate
+                  </p>
+                  <p class="text-amber-400 font-medium text-lg">
+                    Rank 3: ₹4,000 + Certificate
+                  </p>
+                  <p class="text-gray-600 text-sm mt-1">
+                    <strong>Rank 4 & 5: ₹1,000 + Certificate</strong>
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1" style="font-weight: 700;">
+                    Rank 6 to 20: Gifts + Certificate
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1">
+                    Other top performers will receive merit certificates.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-2">
+                    📞 10. Contact Info
+                  </h3>
+                  <div class="space-y-1 text-sm text-gray-800">
+                    <p><strong>Email: </strong> <a href="mailto:info.sat@gmail.com"> info.sat@gmail.com</a></p>
+                    <p><strong>Helpline:</strong>
+                      <a href="tel:+919002352549">+91-9002352549</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t-2 border-red-500 pt-4 mt-6">
+              <h3 class="font-bold text-red-600 uppercase tracking-widest text-xs mb-1">
+                Disclaimer
+              </h3>
+              <p class="text-xs text-gray-500 italic">
+                The Institute reserves the right to change any rules,
+                regulations, or examination details without prior notice if
+                necessary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+           SCHEME 4: Special (8-10)
+           ========================================== -->
+    <section id="scheme-4" class="page-section hidden max-w-5xl mx-auto px-4 py-10 fade-in">
+      <div
+        class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center mb-6 bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+        <h2 class="text-2xl font-extrabold text-[#003366] dark:text-blue-400 mb-4 md:mb-0">Special Scheme (Class 8-10)
+        </h2>
+        <div class="flex gap-3 w-full md:w-auto">
+          <button onclick="downloadSpecificPDF(event, 'content-scheme-4', 'SAT_Special_Scheme_Bulletin.pdf')"
+            class="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-[#003366] font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">⬇️
+            Download</button>
+          <a href="/Registration/Creative/"
+            class="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow flex justify-center items-center gap-2 transition text-sm">📝
+            Apply Now</a>
+        </div>
+      </div>
+      <div id="content-scheme-4" class="overflow-y-auto p-4 md:p-8 flex-grow">
+        <div id="bulletin-canvas-area"
+          class="bg-white p-8 md:p-12 rounded border border-gray-200 shadow-sm text-gray-800 text-sm leading-relaxed max-w-4xl mx-auto font-sans">
+          <div class="text-center mb-8 border-b-4 border-[#003366] pb-6">
+            <h1 class="text-4xl font-black text-[#003366] tracking-wide">
+              IMTSAT 2026
+            </h1>
+            <h2
+              class="text-xl font-bold mt-2 text-gray-800 uppercase tracking-widest bg-yellow-100 inline-block px-4 py-1 rounded">
+              Information Bulletin
+            </h2>
+            <p class="text-gray-600 font-bold mt-3">
+              (Institute of Modern Technology – Scholarship Assessment
+              Test)
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                1. Introduction
+              </h3>
+              <p class="pl-4">
+                The Institute of Modern Technology () conducts the
+                IMTSAT 2026 to identify talented students and award
+                scholarships based on academic performance. The exam
+                encourages students to excel and supports them financially.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  2. Eligibility Criteria
+                </h3>
+                <ul class="list-disc pl-8 space-y-1 font-semibold text-gray-700">
+                  <li>
+                    Students of
+                    <span class="text-blue-600">Class VIII to X</span> are
+                    eligible.
+                  </li>
+                  <li>Must be enrolled in a recognized school.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-2 bg-gray-50 py-1">
+                  3. Examination Details
+                </h3>
+                <ul class="list-none pl-4 space-y-1">
+                  <li><strong>Mode:</strong> Offline (Pen-Paper Based)</li>
+                  <li><strong>Duration:</strong> 1 Hours (60 Minutes)</li>
+                  <li><strong>Exam Time:</strong> 12:00 PM - 01:00 PM</li>
+                  <li><strong>Reporting:</strong> 10:00 AM – 11:30 AM</li>
+                  <li class="text-red-600 font-bold">
+                    Gate Closing: 11:30 AM (No entry after this)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-3 bg-gray-50 py-1">
+                4. Exam Pattern & Marking Scheme
+              </h3>
+              <div class="overflow-x-auto border border-gray-300 rounded-lg md:ml-4 mb-2">
+                <table class="w-full text-left text-sm">
+                  <thead class="bg-[#003366] text-white">
+                    <tr>
+                      <th class="py-2 px-4 border-r border-blue-800">
+                        Subject
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Questions
+                      </th>
+                      <th class="py-2 px-4 border-r border-blue-800 text-center">
+                        Marks per Q.
+                      </th>
+                      <th class="py-2 px-4 text-center">Total Marks</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">English</td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        Mathematics
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="py-2 px-4 border-r font-bold">Reasoning</td>
+                      <td class="py-2 px-4 border-r text-center">15</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">30</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 px-4 border-r font-bold">
+                        General Knowledge
+                      </td>
+                      <td class="py-2 px-4 border-r text-center">10</td>
+                      <td class="py-2 px-4 border-r text-center">2</td>
+                      <td class="py-2 px-4 text-center font-bold">20</td>
+                    </tr>
+                    <tr class="bg-yellow-100 font-bold text-[#003366]">
+                      <td class="py-2 px-4 border-r">Grand Total</td>
+                      <td class="py-2 px-4 border-r text-center">50</td>
+                      <td class="py-2 px-4 border-r text-center">—</td>
+                      <td class="py-2 px-4 text-center">100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p
+                class="mt-3 ml-4 font-bold text-green-700 bg-green-50 inline-block px-3 py-1 border border-green-200 rounded">
+                ❌ No Negative Marking
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-[#003366] border-l-4 border-yellow-400 pl-3 mb-4 bg-gray-50 py-1">
+                5. Detailed Syllabus
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 ml-4">
+                <div class="bg-blue-50/50 p-3 rounded border border-blue-100">
+                  <h4 class="font-bold text-blue-800 border-b border-blue-200 pb-1 mb-2">
+                    📖 English
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Reading Comprehension</strong>
+                      <p>Unseen passages (factual, literary, discursive), Vocabulary in context (synonyms, antonyms),
+                        Inference-based questions, Theme / central idea etc.</p>
+                    </li>
+                    <li>
+                      <strong>Grammar & Usage</strong>
+                      <p>Parts of speech, Tenses (basic to intermediate), Active & passive voice, Direct & indirect
+                        speech, Articles & determiners, Prepositions, Conjunctions, Sentence transformation etc.</p>
+                    </li>
+                    <li>
+                      <strong>Vocabulary</strong>
+                      <p>Synonyms & antonyms, Idioms & phrases, One-word substitutions, Word usage in sentences etc.</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-red-50/50 p-3 rounded border border-red-100">
+                  <h4 class="font-bold text-red-800 border-b border-red-200 pb-1 mb-2">
+                    ➗ Mathematics
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Number System</strong>
+                      <p>
+                        Knowing Our Numbers, Whole Numbers, Playing with
+                        Numbers, Factors and Multiples, Prime and Composite
+                        Numbers, Even and Odd Numbers, Divisibility Rules,
+                        Roman Numerals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Arithmetic Operations</strong>
+                      <p>
+                        Addition and Subtraction of Whole Numbers,
+                        Multiplication of Whole Numbers, Division of Whole
+                        Numbers, Properties of Numbers (commutative,
+                        associative, distributive) etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong> Fractions & Decimals</strong>
+                      <p>
+                        Fractions (basics and types), Equivalent Fractions,
+                        Simplification of Fractions, Addition and Subtraction
+                        of Fractions, Decimals etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geometry</strong>
+                      <p>
+                        Basic Geometrical Ideas (point, line, ray, segment),
+                        Angles (types and measurement), Triangles and
+                        Quadrilaterals, Circles, Symmetry, Construction of
+                        Basic Shapes etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Data Handling & Mensuration</strong>
+                      <p>
+                        Data Handling (pictographs, bar graphs), Perimeter,
+                        Area etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Algebra & Patterns</strong>
+                      <p>
+                        Introduction to Algebra, Simple Expressions, Patterns
+                        and Sequences etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-purple-50/50 p-3 rounded border border-purple-100">
+                  <h4 class="font-bold text-purple-800 border-b border-purple-200 pb-1 mb-2">
+                    🧠 Reasoning
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>
+                      <strong>Basic Logical Reasoning</strong>
+                      <p>
+                        Coding-Decoding, Blood Relation, Direction Sence Test,
+                        Analogy, Classification (Odd One Out), Alphabet
+                        Series, Number Series, Missing Characters
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Puzzle & Arrangement</strong>
+                      <p>
+                        Linear Seating Arrangement, Circular Seating
+                        Arrangement, Square/Rectangular Arrangement,
+                        Floor-Based Puzzle, Box-Based Puzzle, Scheduling
+                        Puzzle Tabulation Puzzle
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Visual & Spatial Reasoning</strong>
+                      <p>
+                        Cubes and Dice, Paper Folding, Paper Cutting, Mirror
+                        Images, Water Images, Embedded Figures, Figure
+                        Counting
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Analytical Reasoning</strong>
+                      <p>
+                        Syllogism, Statement and Conclusion, Statement and
+                        Assumptions, Statement and Arguments, Inference, Data
+                        Sufficiency, Decision Making
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-green-50/50 p-3 rounded border border-green-100">
+                  <h4 class="font-bold text-green-800 border-b border-green-200 pb-1 mb-2">
+                    🌍 General Knowledge / General Studies
+                  </h4>
+                  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <!-- li>strong*p -->
+                    <li>
+                      <strong>History</strong>
+                      <p>
+                        Ancient, Medieval, and Modern History Indian Freedom
+                        Movement etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Geography</strong>
+                      <p>
+                        Physical Geography (mountains, rivers, climate, Dam
+                        etc.,), Indian Geography (states, resources,
+                        agriculture etc,)
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Polity</strong>
+                      <p>Constitution of India (Basic), Fundamental Rights(Basic) etc.</p>
+                    </li>
+                    <!-- <li>
+                        <strong>Economics</strong>
+                        <p>Basic Economics (demand, supply), Indian Economy (budget, GDP, inflation), Banking & Financial System</p>
+                      </li>
+                      <li> -->
+                    <strong>General Science</strong>
+                    <p>
+                      Physics (motion, energy, laws), Chemistry (reactions,
+                      elements), Biology (human body, plants, animals) etc.
+                    </p>
+                    </li>
+                    <li>
+                      <strong>Current Affairs</strong>
+                      <p>
+                        National & International News, Government schemes
+                        Sports, Awards, Appointments, Science & Technology
+                        updates etc.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Culture & Miscellaneous</strong>
+                      <p>
+                        Indian Culture (dance, music, festivals), Books &
+                        Authors Important Days, Awards & Honors
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Static GK (General Awareness)</strong>
+                      <p>
+                        Capitals & Countries, Important Organizations (UN, WHO),Famous Personalities, National Symbols
+                        etc.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  6. Application Process
+                </h3>
+                <ol class="list-decimal pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Visit official website. <a href="https://sat.vercel.app/" style="color: blue;">i.e.
+                      www.sat.com</a>
+                  </li>
+                  <li>Fill details & upload documents.</li>
+                  <li>Pay ₹300 & Submit form.</li>
+                  <li>Download confirmation.</li>
+                </ol>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  7. Admit Card
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Available online before exam.</li>
+                  <li class="text-red-600 font-bold">
+                    Entry without printed admit card is strictly prohibited.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-md text-[#003366] border-b-2 border-[#003366] pb-1 mb-2">
+                  8. Exam Day Rules
+                </h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700 text-xs">
+                  <li>Carry valid ID proof.</li>
+                  <li>Use only blue/black ballpoint pen.</li>
+                  <li>No electronic devices allowed.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 p-5 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-1">
+                    🏆 9. Scholarship & Awards
+                  </h3>
+                  <p class="text-amber-600 font-black text-lg">
+                    Rank 1: ₹10,000 + Certificate
+                  </p>
+                  <p class="text-amber-500 font-bold text-lg">
+                    Rank 2: ₹6,000 + Certificate
+                  </p>
+                  <p class="text-amber-400 font-medium text-lg">
+                    Rank 3: ₹4,000 + Certificate
+                  </p>
+                  <p class="text-gray-600 text-sm mt-1">
+                    <strong>Rank 4 & 5: ₹1,000 + Certificate</strong>
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1" style="font-weight: 700;">
+                    Rank 6 to 20: Gifts + Certificate
+                  </p>
+                  <p class="text-gray-600 text-xs mt-1">
+                    Other top performers will receive merit certificates.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#003366] mb-2">
+                    📞 10. Contact Info
+                  </h3>
+                  <div class="space-y-1 text-sm text-gray-800">
+                    <p><strong>Email: </strong> <a href="mailto:info.sat@gmail.com"> info.sat@gmail.com</a></p>
+                    <p><strong>Helpline:</strong>
+                      <a href="tel:+919002352549">+91-9002352549</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t-2 border-red-500 pt-4 mt-6">
+              <h3 class="font-bold text-red-600 uppercase tracking-widest text-xs mb-1">
+                Disclaimer
+              </h3>
+              <p class="text-xs text-gray-500 italic">
+                The Institute reserves the right to change any rules,
+                regulations, or examination details without prior notice if
+                necessary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-[#002244] text-gray-300 pt-10 pb-6 border-t-4 border-yellow-400">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+
+      <!-- 🌟 UPDATED QUICK LINKS WITH POPUP LOGIC -->
+      <div>
+        <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+        <ul class="text-sm space-y-2">
+          <li>
+            <a href="#" onclick="openServicePopup(event, 'apply')" class="hover:text-yellow-400 transition">Apply for
+              IMTSAT 2026</a>
+          </li>
+          <li>
+            <a href="#" onclick="openServicePopup(event, 'admit')" class="hover:text-yellow-400 transition">Download
+              Admit Card</a>
+          </li>
+          <li>
+            <a href="#" onclick="openServicePopup(event, 'result')" class="hover:text-yellow-400 transition">Check
+              Result</a>
+          </li>
+          <li>
+            <a href="https://satblogs.vercel.app/" class="hover:text-yellow-400 transition">Blogs</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-bold text-white mb-4">Follow Us</h4>
+        <ul class="text-sm space-y-2">
+          <li>
+            <a href="https://www.instagram.com/instituteofeduandinnovation/"
+              class="hover:text-yellow-400 transition">Instagram</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 transition">Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@InstituteofEduandInnovation"
+              class="hover:text-yellow-400 transition">Youtube</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-bold text-white mb-4">Contact Us</h4>
+        <ul class="text-sm space-y-2 text-gray-400">
+          <li>
+            <strong class="text-gray-200">Email:</strong>
+            <a href="mailto:info.sat@gmail.com">info.sat@gmail.com</a>
+          </li>
+          <li>
+            <strong class="text-gray-200">Phone:</strong> <a href="tel:+919002352549">+91-9002352549</a>
+          </li>
+          <li>
+            <strong class="text-gray-200">Address:</strong>
+            <a href="https://maps.app.goo.gl/TFMbHcZKvqYiCBvFA" target="_blank" rel="noopener noreferrer"> Head
+              Office,
+              Malda, West Bengal, 732207</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs border-t border-gray-600 pt-4 text-gray-500">
+      <p>&copy; 2026 Institute of Modern Technology (). All Rights Reserved. | <button
+          style="color: blue;  background: none; border: none; text-decoration: underline;"
+          onclick="switchPage('terms-page')">
+          Terms & Conditions
+        </button> | <button style="color: blue;  background: none; border: none; text-decoration: underline;"
+          onclick="switchPage('privacy-page')">
+          Privacy Policy
+        </button></p>
+    </div>
+  </footer>
+
+  <div id="notice-preview-modal"
+    class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 md:p-8 hidden backdrop-blur-sm transition-all duration-300">
+    <div
+      class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-[95vw] h-[90vh] max-w-7xl flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700">
+      <!-- Modal Header -->
+      <div
+        class="p-4 md:p-5 flex justify-between items-center border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Notice Attachment</h3>
+
+        <!-- Button Container -->
+        <div class="flex items-center gap-2 md:gap-4">
+          <!-- Download Button (By default hidden) -->
+          <a id="modal-download-btn" href="#" target="_blank"
+            class="hidden bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-bold flex items-center gap-1.5 shadow transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Download
+          </a>
+
+          <!-- Close Button -->
+          <button onclick="closeNoticePreview()"
+            class="text-gray-500 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 p-1.5 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+            <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+      </div>
+      <!-- Modal Content (Iframe Container) -->
+      <div class="flex-grow bg-gray-100 dark:bg-gray-900 overflow-hidden relative">
+        <!-- Loading state -->
+        <div id="preview-loading"
+          class="absolute inset-0 flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 gap-3">
+          <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500"></div>
+          <p class="font-medium text-sm">Loading...</p>
+        </div>
+        <!-- Iframe -->
+        <iframe id="preview-iframe" class="w-full h-full border-0 hidden" allow="autoplay"></iframe>
+      </div>
+      <!-- Optional Footer -->
+      <div
+        class="p-3 text-center text-xs text-gray-500 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
+        Click on 'Close' or outside this area to exit.
+      </div>
+    </div>
+  </div>
+
+  <script src="/index.js"></script>
+</body>
+
+</html>

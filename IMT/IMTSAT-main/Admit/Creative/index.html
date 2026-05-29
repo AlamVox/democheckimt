@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEISAT | Portal Status</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Admit/admit.css">
+
+  
+</head>
+
+<body>
+
+    <div id="maintenance-page">
+        <div class="logo-container">
+            <img src="/Pictures/logo.png" alt="IEISAT - Institute of Education and Innovation Logo" loading="lazy" style="width: 100%;">
+        </div>
+        <h1>IEISAT</h1>
+        <p class="tagline">Admit Card Portal is opening soon</p>
+
+        <div class="timer-container">
+            <div class="timer-box"><span id="days">00</span><label>Days</label></div>
+            <div class="timer-box"><span id="hours">00</span><label>Hours</label></div>
+            <div class="timer-box"><span id="minutes">00</span><label>Mins</label></div>
+            <div class="timer-box"><span id="seconds">00</span><label>Secs</label></div>
+        </div>
+
+        <div class="notice-card">
+            📢 The portal (will be opened) on January 5, 2027.
+        </div>
+    </div>
+
+    <div id="portal-page">
+        <iframe
+            src="https://script.google.com/macros/s/AKfycbxKNRZcCtPhMvx3WmSG2IS_ajJgH5HI9zqbmVzpclRl6noC2VSW3Wzhk3IoWxZOee_7xA/exec"
+            title="IEISAT Portal"></iframe>
+    </div>
+
+    <script>
+        // আপনার দেওয়া সঠিক তারিখ এবং সময় সেট করা হয়েছে
+        const targetDate = new Date("2027-01-05T23:59:59").getTime();
+
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minsEl = document.getElementById("minutes");
+        const secsEl = document.getElementById("seconds");
+        const maintenancePage = document.getElementById("maintenance-page");
+
+        // সংখ্যা ১০ এর কম হলে সামনে একটি '0' যোগ করার ফাংশন
+        function formatTime(time) {
+            return time < 10 ? `0${time}` : time;
+        }
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                // সময় বাকি থাকলে ক্যালকুলেশন
+                const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+                daysEl.innerText = formatTime(d);
+                hoursEl.innerText = formatTime(h);
+                minsEl.innerText = formatTime(m);
+                secsEl.innerText = formatTime(s);
+            } else {
+                // সময় হয়ে গেলে পোর্টাল দেখানো
+                showPortal();
+            }
+        }
+
+        function showPortal() {
+            // CSS ট্রানজিশনের মাধ্যমে সুন্দরভাবে পেজটি হাইড হবে
+            maintenancePage.style.opacity = "0";
+            maintenancePage.style.visibility = "hidden";
+            document.body.style.overflow = "auto"; // স্ক্রলিং চালু করা
+
+            // টাইমার বন্ধ করা যাতে ব্রাউজারের মেমরি বাঁচে
+            if (window.timerInterval) {
+                clearInterval(window.timerInterval);
+            }
+        }
+
+        // পেজ লোড হওয়ার সাথে সাথে একবার চেক করা
+        const initialDiff = targetDate - new Date().getTime();
+        if (initialDiff > 0) {
+            updateTimer();
+            // প্রতি সেকেন্ডে টাইমার আপডেট হবে
+            window.timerInterval = setInterval(updateTimer, 1000);
+        } else {
+            // যদি তারিখ আগে থেকেই পার হয়ে গিয়ে থাকে, তাহলে সরাসরি পোর্টাল ওপেন হবে
+            maintenancePage.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+</body>
+
+</html>
